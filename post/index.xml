@@ -6,8 +6,20 @@
     <description>Recent content in Posts on CHoudeshell</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jun 2015 13:57:00 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2015 14:52:55 -0400</lastBuildDate>
     <atom:link href="http://choudeshell.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>blah3</title>
+      <link>http://choudeshell.github.io/post/blah3/</link>
+      <pubDate>Wed, 03 Jun 2015 14:52:55 -0400</pubDate>
+      
+      <guid>http://choudeshell.github.io/post/blah3/</guid>
+      <description>
+
+&lt;h3 id=&#34;test3:996f8f60167a40f2ce8bec2fa6257e9d&#34;&gt;TEST3&lt;/h3&gt;
+</description>
+    </item>
     
     <item>
       <title>blah2</title>
