@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Chris Houdeshell | Bit Herder</title>
-    <link>http://localhost:1313/post/</link>
+    <link>http://choudeshell.com/post/</link>
     <description>Recent content in Posts on Chris Houdeshell | Bit Herder</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Chris Houdeshell</copyright>
     <lastBuildDate>Fri, 20 Jun 2014 13:35:28 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://choudeshell.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Sometimes explicit is the best approach</title>
-      <link>http://localhost:1313/post/explicit_node/</link>
+      <link>http://choudeshell.com/post/explicit_node/</link>
       <pubDate>Fri, 20 Jun 2014 13:35:28 -0400</pubDate>
       
-      <guid>http://localhost:1313/post/explicit_node/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/nodejs.shut_.the_.fuck_.up_.and_.code_.png&#34; style=&#34;width: 100%&#34; /&gt;&lt;/p&gt;
+      <guid>http://choudeshell.com/post/explicit_node/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://choudeshell.com/images/nodejs.shut_.the_.fuck_.up_.and_.code_.png&#34; style=&#34;width: 100%&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
@@ -35,10 +35,10 @@
     
     <item>
       <title>Tattle - Yet Another Entity Framework Event Exposer</title>
-      <link>http://localhost:1313/post/tattle/</link>
+      <link>http://choudeshell.com/post/tattle/</link>
       <pubDate>Sat, 03 May 2014 13:57:00 -0400</pubDate>
       
-      <guid>http://localhost:1313/post/tattle/</guid>
+      <guid>http://choudeshell.com/post/tattle/</guid>
       <description>&lt;p&gt;Debugging Entity Framework generated SQL is tough at times. The sometimes-elegant SQL is filled with parameters in every facet. One of the ways to view that SQL is to call .ToString() on any IQueryable. If you want to print the SQL out to the debug console in Visual Studio or even log the SQL &amp;ndash; you&amp;rsquo;ll have to create a wrapped provider.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://code.msdn.microsoft.com/EFProviderWrappers-c0b88f32&#34;&gt;Microsoft provides a logging and cache provider&lt;/a&gt; example. Based off the idea of this example, I created a wrapped provider of my own that should simplify tracing and logging of the generate SQL.&lt;/p&gt;
@@ -211,10 +211,10 @@ I&amp;rsquo;m still working on Tattle and it has a MIT licence. The next version
     
     <item>
       <title>OWIN! Embrace Open Source</title>
-      <link>http://localhost:1313/post/owin_embrace/</link>
+      <link>http://choudeshell.com/post/owin_embrace/</link>
       <pubDate>Tue, 03 Dec 2013 14:52:55 -0400</pubDate>
       
-      <guid>http://localhost:1313/post/owin_embrace/</guid>
+      <guid>http://choudeshell.com/post/owin_embrace/</guid>
       <description>&lt;p&gt;Below is the talk I gave at the &lt;a href=&#34;http://phillydotnet.org/&#34;&gt;PhillyDotNet&lt;/a&gt; 2013.2 Code Camp. Since I did some live-coding; the code didn&amp;rsquo;t end up as clean as I planned. Instead, please reference the tutorial from the ASP.NET site, &lt;a href=&#34;http://www.asp.net/aspnet/overview/owin-and-katana/getting-started-with-owin-and-katana&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;ba4e31a037ad0131a20f6279b543adb8&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
