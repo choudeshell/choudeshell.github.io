@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Tattle - Yet Another Entity Framework Event Exposer &middot; Chris Houdeshell</title>
+
+  
+  <link rel="shortcut icon" href="http://localhost:1313/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="http://localhost:1313/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="http://localhost:1313//css/poole.css">
+  <link rel="stylesheet" href="http://localhost:1313//css/hyde.css">
+  <link rel="stylesheet" href="http://localhost:1313//css/poole-overrides.css">
+  <link rel="stylesheet" href="http://localhost:1313//css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://localhost:1313//css/hyde-x.css">
+  <link rel="stylesheet" href="http://localhost:1313//css/highlight/sunburst.css">
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  
+  <link href="http://localhost:1313/favicon.ico" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  
+</head>
+<body>
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>Chris Houdeshell</h1>
+      <p class="lead">Bit Herding</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://localhost:1313//">Blog</a></li>
+      
+      <li class="sidebar-nav-item"><a href="http://localhost:1313/about">About</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="mailto:choudeshell@gmail.com"><i class="fa fa-envelope-square fa-2x"></i></a>
+      <a href="https://github.com/choudeshell"><i class="fa fa-github-square fa-2x"></i></a>
+      
+      <a href="http://www.linkedin.com/in/choudeshell"><i class="fa fa-linkedin-square fa-2x"></i></a>
+      
+      
+      <a href="https://twitter.com/choudeshell"><i class="fa fa-twitter-square fa-2x"></i></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1>Tattle - Yet Another Entity Framework Event Exposer</h1>
+    <span class="post-date">May 3, 2014 &middot; 4 minute read
+    
+    <br/>
+    
+    <a class="label" href="http://localhost:1313//categories/ef">ef</a><a class="label" href="http://localhost:1313//categories/c">c#</a>
+    </span>
+    <p>Debugging Entity Framework generated SQL is tough at times. The sometimes-elegant SQL is filled with parameters in every facet. One of the ways to view that SQL is to call .ToString() on any IQueryable. If you want to print the SQL out to the debug console in Visual Studio or even log the SQL &ndash; you&rsquo;ll have to create a wrapped provider.</p>
+
+<p><a href="http://code.msdn.microsoft.com/EFProviderWrappers-c0b88f32">Microsoft provides a logging and cache provider</a> example. Based off the idea of this example, I created a wrapped provider of my own that should simplify tracing and logging of the generate SQL.</p>
+
+<p><a href="https://github.com/choudeshell/tattle">Tattle</a> provides and easy to use abstraction. It is as simple as implementing an ITattler and a few methods. The methods and a description of the &lsquo;events&rsquo; are:
+<ul>
+    <li>CommandResult - Fire when a command is completed</li>
+    <li>DbConnectionClose - Fired when a connection is closed</li>
+    <li>DbConnectionStart - Fired when a connection is opened</li>
+    <li>DtcTransactionComplete - Fired when a Distrubted Transaction Coordinator transactions is completed (committed)</li>
+    <li>DtcTransactionEnlist - Fired when a DTC transaction is created</li>
+    <li>StatementException - Fired when a DbCommand throws an exception</li>
+    <li>StatementExecute - Fired after a DbCommand is executed</li>
+    <li>StatementRowCount - Fired after a DbCommand is executed</li>
+    <li>TransactionBegin - When a generic/SQL transaction is started</li>
+    <li>TransactionComplete - Fired when a transaction is committed</li>
+    <li>TransactionDispose - Fired when a transaction is GC</li>
+    <li>TransactionRollback - Fired when a transaction is rolled back</li>
+</ul>
+A full implementation of an ITattler:</p>
+
+<pre><code>public class TraceTattler:ITattler
+{
+    /// &amp;lt;summary&amp;gt;
+    /// Default constructor
+    /// &amp;lt;/summary&amp;gt;
+    public TraceTattler()
+    {
+
+    }
+
+    /// &amp;lt;summary&amp;gt;
+    /// Prints the command results
+    /// &amp;lt;/summary&amp;gt;
+    /// &amp;lt;param name=&quot;connectionId&quot;&amp;gt;&amp;lt;/param&amp;gt;
+    /// &amp;lt;param name=&quot;milliseconds&quot;&amp;gt;&amp;lt;/param&amp;gt;
+    /// &amp;lt;param name=&quot;rowCount&quot;&amp;gt;&amp;lt;/param&amp;gt;
+    public void CommandResult(Guid connectionId, long milliseconds, int? rowCount)
+    {
+        var output = String.Format(&quot;Connection: {0}tDuration: {1}tRowCount: {2}&quot;, connectionId, milliseconds, rowCount);
+        Debug.WriteLine(output);
+    }
+
+    /// &amp;lt;summary&amp;gt;
+    /// Fired when the connection is 'close' (put back in the pool)
+    /// &amp;lt;/summary&amp;gt;
+    /// &amp;lt;param name=&quot;connectionId&quot;&amp;gt;&amp;lt;/param&amp;gt;
+    public void DbConnectionClose(Guid connectionId)
+    {
+         var output = String.Format(&quot;Connection Closed: {0}t&quot;, connectionId);
+        Debug.WriteLine(output);
+    }
+
+    /// &amp;lt;summary&amp;gt;
+    /// Fired when the connection is opened
+    /// &amp;lt;/summary&amp;gt;
+    /// &amp;lt;param name=&quot;connectionId&quot;&amp;gt;&amp;lt;/param&amp;gt;
+    public void DbConnectionStart(Guid connectionId)
+    {
+        var output = String.Format(&quot;Connection Started: {0}t&quot;, connectionId);
+        Debug.WriteLine(output);
+    }
+
+    /// &amp;lt;summary&amp;gt;
+    /// Fired when a distributed transaction is complete
+    /// &amp;lt;/summary&amp;gt;
+    /// &amp;lt;param name=&quot;connectionId&quot;&amp;gt;&amp;lt;/param&amp;gt;
+    /// &amp;lt;param name=&quot;status&quot;&amp;gt;&amp;lt;/param&amp;gt;
+    public void DtcTransactionComplete(Guid connectionId, System.Transactions.TransactionStatus status)
+    {
+        var output = String.Format(&quot;DTC Transaction Begin: {0}tStatus: {1}&quot;, connectionId, status.ToString());
+        Debug.WriteLine(output);
+    }
+
+    /// &amp;lt;summary&amp;gt;
+    /// Fired when a distributed transaction is created
+    /// &amp;lt;/summary&amp;gt;
+    /// &amp;lt;param name=&quot;connectionId&quot;&amp;gt;&amp;lt;/param&amp;gt;
+    /// &amp;lt;param name=&quot;isolationLevel&quot;&amp;gt;&amp;lt;/param&amp;gt;
+    public void DtcTransactionEnlist(Guid connectionId, System.Transactions.IsolationLevel isolationLevel)
+    {
+        var output = String.Format(&quot;DTC Transaction Enlisted: {0}tStatus: {1}&quot;, connectionId, isolationLevel.ToString());
+        Debug.WriteLine(output);
+    }
+
+    /// &amp;lt;summary&amp;gt;
+    /// Fired when the provider implimentor triggers an exception (ie bad sql)
+    /// &amp;lt;/summary&amp;gt;
+    /// &amp;lt;param name=&quot;connectionId&quot;&amp;gt;&amp;lt;/param&amp;gt;
+    /// &amp;lt;param name=&quot;exception&quot;&amp;gt;&amp;lt;/param&amp;gt;
+    public void StatementException(Guid connectionId, Exception exception)
+    {
+        var output = String.Format(&quot;Statement Exception: {0}tConnection: {1}&quot;, exception.ToString(), connectionId);
+        Debug.WriteLine(output);
+    }
+
+    /// &amp;lt;summary&amp;gt;
+    /// Fired when a statement is executed
+    /// &amp;lt;/summary&amp;gt;
+    /// &amp;lt;param name=&quot;connectionId&quot;&amp;gt;&amp;lt;/param&amp;gt;
+    /// &amp;lt;param name=&quot;statementId&quot;&amp;gt;&amp;lt;/param&amp;gt;
+    /// &amp;lt;param name=&quot;dbCommand&quot;&amp;gt;&amp;lt;/param&amp;gt;
+    public void StatementExecute(Guid connectionId, Guid statementId, System.Data.Common.DbCommand dbCommand)
+    {
+        var output = String.Format(&quot;Connection: {0}tID: {1}tStatement: {2}{3}&quot;, connectionId, statementId,Environment.NewLine,((SqlCommand) dbCommand).ToSqlString());
+        Debug.WriteLine(output);
+    }
+
+    /// &amp;lt;summary&amp;gt;
+    /// Fired when a statement is executed returning the effected record count
+    /// &amp;lt;/summary&amp;gt;
+    /// &amp;lt;param name=&quot;connectionId&quot;&amp;gt;&amp;lt;/param&amp;gt;
+    /// &amp;lt;param name=&quot;statementId&quot;&amp;gt;&amp;lt;/param&amp;gt;
+    /// &amp;lt;param name=&quot;rowCount&quot;&amp;gt;&amp;lt;/param&amp;gt;
+    public void StatementRowCount(Guid connectionId, Guid statementId, int rowCount)
+    {
+         var output = String.Format(&quot;Statement Row Count: {0}tConnection: {1}tID: {2}&quot;, rowCount, connectionId, statementId);
+        Debug.WriteLine(output);
+    }
+
+    /// &amp;lt;summary&amp;gt;
+    /// Fired when a transaction is opened
+    /// &amp;lt;/summary&amp;gt;
+    /// &amp;lt;param name=&quot;connectionId&quot;&amp;gt;&amp;lt;/param&amp;gt;
+    /// &amp;lt;param name=&quot;isolationLevel&quot;&amp;gt;&amp;lt;/param&amp;gt;
+    public void TransactionBegin(Guid connectionId, System.Data.IsolationLevel isolationLevel)
+    {            
+        var output = String.Format(&quot;Transaction Begin: {0}tIsolationLevel: {1}&quot;, connectionId, isolationLevel);
+        Debug.WriteLine(output);
+    }
+
+    /// &amp;lt;summary&amp;gt;
+    /// Fired when a transaction is commited
+    /// &amp;lt;/summary&amp;gt;
+    /// &amp;lt;param name=&quot;connectionId&quot;&amp;gt;&amp;lt;/param&amp;gt;
+    public void TransactionCommit(Guid connectionId)
+    {
+        var output = String.Format(&quot;Transaction Commit: {0}&quot;, connectionId);
+        Debug.WriteLine(output);
+    }
+
+    /// &amp;lt;summary&amp;gt;
+    /// Fired when a transaction is closed
+    /// &amp;lt;/summary&amp;gt;
+    /// &amp;lt;param name=&quot;connectionId&quot;&amp;gt;&amp;lt;/param&amp;gt;
+    public void TransactionDispose(Guid connectionId)
+    {
+        var output = String.Format(&quot;Transaction Dispsoe: {0}&quot;, connectionId);
+        Debug.WriteLine(output);
+    }
+
+    /// &amp;lt;summary&amp;gt;
+    /// Fired when a transaction is rolled back
+    /// &amp;lt;/summary&amp;gt;
+    /// &amp;lt;param name=&quot;connectionId&quot;&amp;gt;&amp;lt;/param&amp;gt;
+    public void TransactionRollBack(Guid connectionId)
+    {
+        var output = String.Format(&quot;Transaction Rollback: {0}&quot;, connectionId);
+        Debug.WriteLine(output);
+    }
+}
+</code></pre>
+
+<p><h3> Entity Framework 6</h3>
+At the moment, Tattle doesn&rsquo;t work with EF6. One of the reason is that Tattle is a custom provider and EF6 changed the way that it loads providers. EF6 only loads the providers once via factories for multiple DbContexts. EF5 on the other hand loaded them each time a new DbContext was constructed.
+<h3>Going Forward</h3>
+I&rsquo;m still working on Tattle and it has a MIT licence. The next version of Tattle will include EF6 support, a NuGet package and end to end tests. If you want to help out, head on over to <a href="https://github.com/choudeshell/tattle/issues">GitHub</a>.</p>
+
+  </div>
+  
+</div>
+
+
+
+
+<script src="http://localhost:1313//js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>

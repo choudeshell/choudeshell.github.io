@@ -67,7 +67,7 @@ body {
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
-  color: #268bd2;
+  color: #1B9C01;
   text-decoration: none;
 }
 a strong {
@@ -76,7 +76,7 @@ a strong {
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
-  text-decoration: underline;
+    border-bottom: 1px solid #A3A3A3;
 }
 
 /* Headings */
@@ -333,11 +333,16 @@ tbody tr:nth-child(odd) th {
   margin-bottom: 4em;
 }
 
+.post h1
+{
+  font-weight: 300;
+}
+
 /* Blog post or page title */
 .page-title,
 .post-title,
 .post-title a {
-  color: #303030;
+  color: #84B931;  
 }
 .page-title,
 .post-title {

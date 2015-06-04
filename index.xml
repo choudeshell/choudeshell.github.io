@@ -1,53 +1,239 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CHoudeshell</title>
-    <link>http://choudeshell.github.io/</link>
-    <description>Recent content on CHoudeshell</description>
+    <title>Chris Houdeshell | Bit Herder</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Chris Houdeshell | Bit Herder</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jun 2015 14:52:55 -0400</lastBuildDate>
-    <atom:link href="http://choudeshell.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Chris Houdeshell</copyright>
+    <lastBuildDate>Wed, 03 Jun 2015 15:20:05 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>blah3</title>
-      <link>http://choudeshell.github.io/post/blah3/</link>
-      <pubDate>Wed, 03 Jun 2015 14:52:55 -0400</pubDate>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Wed, 03 Jun 2015 15:20:05 -0400</pubDate>
       
-      <guid>http://choudeshell.github.io/post/blah3/</guid>
-      <description>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;Chris Houdeshell is a bit herder, a pointer wrecker, and a HTTP (with TLS) slinger.&lt;/p&gt;
 
-&lt;h3 id=&#34;test3:996f8f60167a40f2ce8bec2fa6257e9d&#34;&gt;TEST3&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/me.png&#34; height=&#34;250px&#34; style=&#34;display:inline; float:right&#34;/&gt; He is comfortable in both system languages and languages that make the cloud fluffy. He loves all modern technology but a special place is reserved in his heart for IoT/microcontrollers, distributed systems and anything that has a content-type.&lt;/p&gt;
+
+&lt;p&gt;During the day, Chris conjures up software for an energy management company. Chris works on all layers of that stack and all avenues that come along with it &amp;ndash; from DevOps to project management.&lt;/p&gt;
+
+&lt;p&gt;Chris also drinks a bit too much coffee while rambling on about technology. If you are willing to have a conversation &amp;ndash; he is ready to buy you a cup. Just email.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>blah2</title>
-      <link>http://choudeshell.github.io/post/blah2/</link>
-      <pubDate>Wed, 03 Jun 2015 13:57:00 -0400</pubDate>
+      <title>Sometimes explicit is the best approach</title>
+      <link>http://localhost:1313/post/explicit_node/</link>
+      <pubDate>Fri, 20 Jun 2014 13:35:28 -0400</pubDate>
       
-      <guid>http://choudeshell.github.io/post/blah2/</guid>
-      <description>
+      <guid>http://localhost:1313/post/explicit_node/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/nodejs.shut_.the_.fuck_.up_.and_.code_.png&#34; style=&#34;width: 100%&#34; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;test:a2f278e5d044ad737ad684ed273c7ed5&#34;&gt;TEST&lt;/h3&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
-&lt;h1 id=&#34;test-1:a2f278e5d044ad737ad684ed273c7ed5&#34;&gt;TEST&lt;/h1&gt;
+&lt;p&gt;That is the wallpaper currently adoring my screens. It is isn&amp;rsquo;t explicit because of the use of the word &amp;lsquo;fuck&amp;rsquo;, but because it distills the idea of sometimes you just need to stop the meetings and just code.  Stand-up meetings are sometimes bastardized to create a &amp;lsquo;lets all tell management/stakeholders where we are at&amp;rsquo; and take longer than the expected time-box of 5-15 minutes. This wasn&amp;rsquo;t and isn&amp;rsquo;t there purpose. The purpose of an Agile stand-up meeting is to simply coordinate with your team, help each other out if needed, then get back to cooking up some sweet code.&lt;/p&gt;
+
+&lt;p&gt;If your stand-up time is hijacked by stakeholders or management, maybe you just need to be explicit and tell them that you need to back to fucking coding.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://synodinos.files.wordpress.com/2010/08/nodejs-wallpaper-nsfw.jpg&#34;&gt;Grab the wallpaper&lt;/a&gt;&lt;a href=&#34;http://synodinos.files.wordpress.com/2010/08/nodejs-wallpaper-nsfw.jpg&#34;&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>blah</title>
-      <link>http://choudeshell.github.io/post/blah/</link>
-      <pubDate>Wed, 03 Jun 2015 13:35:28 -0400</pubDate>
+      <title>Tattle - Yet Another Entity Framework Event Exposer</title>
+      <link>http://localhost:1313/post/tattle/</link>
+      <pubDate>Sat, 03 May 2014 13:57:00 -0400</pubDate>
       
-      <guid>http://choudeshell.github.io/post/blah/</guid>
-      <description>
+      <guid>http://localhost:1313/post/tattle/</guid>
+      <description>&lt;p&gt;Debugging Entity Framework generated SQL is tough at times. The sometimes-elegant SQL is filled with parameters in every facet. One of the ways to view that SQL is to call .ToString() on any IQueryable. If you want to print the SQL out to the debug console in Visual Studio or even log the SQL &amp;ndash; you&amp;rsquo;ll have to create a wrapped provider.&lt;/p&gt;
 
-&lt;h3 id=&#34;test:bae46977ecb260132f83a2986ae0a519&#34;&gt;TEST&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;http://code.msdn.microsoft.com/EFProviderWrappers-c0b88f32&#34;&gt;Microsoft provides a logging and cache provider&lt;/a&gt; example. Based off the idea of this example, I created a wrapped provider of my own that should simplify tracing and logging of the generate SQL.&lt;/p&gt;
 
-&lt;p&gt;blah&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/choudeshell/tattle&#34;&gt;Tattle&lt;/a&gt; provides and easy to use abstraction. It is as simple as implementing an ITattler and a few methods. The methods and a description of the &amp;lsquo;events&amp;rsquo; are:
+&lt;ul&gt;
+    &lt;li&gt;CommandResult - Fire when a command is completed&lt;/li&gt;
+    &lt;li&gt;DbConnectionClose - Fired when a connection is closed&lt;/li&gt;
+    &lt;li&gt;DbConnectionStart - Fired when a connection is opened&lt;/li&gt;
+    &lt;li&gt;DtcTransactionComplete - Fired when a Distrubted Transaction Coordinator transactions is completed (committed)&lt;/li&gt;
+    &lt;li&gt;DtcTransactionEnlist - Fired when a DTC transaction is created&lt;/li&gt;
+    &lt;li&gt;StatementException - Fired when a DbCommand throws an exception&lt;/li&gt;
+    &lt;li&gt;StatementExecute - Fired after a DbCommand is executed&lt;/li&gt;
+    &lt;li&gt;StatementRowCount - Fired after a DbCommand is executed&lt;/li&gt;
+    &lt;li&gt;TransactionBegin - When a generic/SQL transaction is started&lt;/li&gt;
+    &lt;li&gt;TransactionComplete - Fired when a transaction is committed&lt;/li&gt;
+    &lt;li&gt;TransactionDispose - Fired when a transaction is GC&lt;/li&gt;
+    &lt;li&gt;TransactionRollback - Fired when a transaction is rolled back&lt;/li&gt;
+&lt;/ul&gt;
+A full implementation of an ITattler:&lt;/p&gt;
 
-&lt;h2 id=&#34;test-1:bae46977ecb260132f83a2986ae0a519&#34;&gt;TEST&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;public class TraceTattler:ITattler
+{
+    /// &amp;amp;lt;summary&amp;amp;gt;
+    /// Default constructor
+    /// &amp;amp;lt;/summary&amp;amp;gt;
+    public TraceTattler()
+    {
+
+    }
+
+    /// &amp;amp;lt;summary&amp;amp;gt;
+    /// Prints the command results
+    /// &amp;amp;lt;/summary&amp;amp;gt;
+    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
+    /// &amp;amp;lt;param name=&amp;quot;milliseconds&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
+    /// &amp;amp;lt;param name=&amp;quot;rowCount&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
+    public void CommandResult(Guid connectionId, long milliseconds, int? rowCount)
+    {
+        var output = String.Format(&amp;quot;Connection: {0}tDuration: {1}tRowCount: {2}&amp;quot;, connectionId, milliseconds, rowCount);
+        Debug.WriteLine(output);
+    }
+
+    /// &amp;amp;lt;summary&amp;amp;gt;
+    /// Fired when the connection is &#39;close&#39; (put back in the pool)
+    /// &amp;amp;lt;/summary&amp;amp;gt;
+    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
+    public void DbConnectionClose(Guid connectionId)
+    {
+         var output = String.Format(&amp;quot;Connection Closed: {0}t&amp;quot;, connectionId);
+        Debug.WriteLine(output);
+    }
+
+    /// &amp;amp;lt;summary&amp;amp;gt;
+    /// Fired when the connection is opened
+    /// &amp;amp;lt;/summary&amp;amp;gt;
+    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
+    public void DbConnectionStart(Guid connectionId)
+    {
+        var output = String.Format(&amp;quot;Connection Started: {0}t&amp;quot;, connectionId);
+        Debug.WriteLine(output);
+    }
+
+    /// &amp;amp;lt;summary&amp;amp;gt;
+    /// Fired when a distributed transaction is complete
+    /// &amp;amp;lt;/summary&amp;amp;gt;
+    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
+    /// &amp;amp;lt;param name=&amp;quot;status&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
+    public void DtcTransactionComplete(Guid connectionId, System.Transactions.TransactionStatus status)
+    {
+        var output = String.Format(&amp;quot;DTC Transaction Begin: {0}tStatus: {1}&amp;quot;, connectionId, status.ToString());
+        Debug.WriteLine(output);
+    }
+
+    /// &amp;amp;lt;summary&amp;amp;gt;
+    /// Fired when a distributed transaction is created
+    /// &amp;amp;lt;/summary&amp;amp;gt;
+    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
+    /// &amp;amp;lt;param name=&amp;quot;isolationLevel&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
+    public void DtcTransactionEnlist(Guid connectionId, System.Transactions.IsolationLevel isolationLevel)
+    {
+        var output = String.Format(&amp;quot;DTC Transaction Enlisted: {0}tStatus: {1}&amp;quot;, connectionId, isolationLevel.ToString());
+        Debug.WriteLine(output);
+    }
+
+    /// &amp;amp;lt;summary&amp;amp;gt;
+    /// Fired when the provider implimentor triggers an exception (ie bad sql)
+    /// &amp;amp;lt;/summary&amp;amp;gt;
+    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
+    /// &amp;amp;lt;param name=&amp;quot;exception&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
+    public void StatementException(Guid connectionId, Exception exception)
+    {
+        var output = String.Format(&amp;quot;Statement Exception: {0}tConnection: {1}&amp;quot;, exception.ToString(), connectionId);
+        Debug.WriteLine(output);
+    }
+
+    /// &amp;amp;lt;summary&amp;amp;gt;
+    /// Fired when a statement is executed
+    /// &amp;amp;lt;/summary&amp;amp;gt;
+    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
+    /// &amp;amp;lt;param name=&amp;quot;statementId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
+    /// &amp;amp;lt;param name=&amp;quot;dbCommand&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
+    public void StatementExecute(Guid connectionId, Guid statementId, System.Data.Common.DbCommand dbCommand)
+    {
+        var output = String.Format(&amp;quot;Connection: {0}tID: {1}tStatement: {2}{3}&amp;quot;, connectionId, statementId,Environment.NewLine,((SqlCommand) dbCommand).ToSqlString());
+        Debug.WriteLine(output);
+    }
+
+    /// &amp;amp;lt;summary&amp;amp;gt;
+    /// Fired when a statement is executed returning the effected record count
+    /// &amp;amp;lt;/summary&amp;amp;gt;
+    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
+    /// &amp;amp;lt;param name=&amp;quot;statementId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
+    /// &amp;amp;lt;param name=&amp;quot;rowCount&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
+    public void StatementRowCount(Guid connectionId, Guid statementId, int rowCount)
+    {
+         var output = String.Format(&amp;quot;Statement Row Count: {0}tConnection: {1}tID: {2}&amp;quot;, rowCount, connectionId, statementId);
+        Debug.WriteLine(output);
+    }
+
+    /// &amp;amp;lt;summary&amp;amp;gt;
+    /// Fired when a transaction is opened
+    /// &amp;amp;lt;/summary&amp;amp;gt;
+    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
+    /// &amp;amp;lt;param name=&amp;quot;isolationLevel&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
+    public void TransactionBegin(Guid connectionId, System.Data.IsolationLevel isolationLevel)
+    {            
+        var output = String.Format(&amp;quot;Transaction Begin: {0}tIsolationLevel: {1}&amp;quot;, connectionId, isolationLevel);
+        Debug.WriteLine(output);
+    }
+
+    /// &amp;amp;lt;summary&amp;amp;gt;
+    /// Fired when a transaction is commited
+    /// &amp;amp;lt;/summary&amp;amp;gt;
+    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
+    public void TransactionCommit(Guid connectionId)
+    {
+        var output = String.Format(&amp;quot;Transaction Commit: {0}&amp;quot;, connectionId);
+        Debug.WriteLine(output);
+    }
+
+    /// &amp;amp;lt;summary&amp;amp;gt;
+    /// Fired when a transaction is closed
+    /// &amp;amp;lt;/summary&amp;amp;gt;
+    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
+    public void TransactionDispose(Guid connectionId)
+    {
+        var output = String.Format(&amp;quot;Transaction Dispsoe: {0}&amp;quot;, connectionId);
+        Debug.WriteLine(output);
+    }
+
+    /// &amp;amp;lt;summary&amp;amp;gt;
+    /// Fired when a transaction is rolled back
+    /// &amp;amp;lt;/summary&amp;amp;gt;
+    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
+    public void TransactionRollBack(Guid connectionId)
+    {
+        var output = String.Format(&amp;quot;Transaction Rollback: {0}&amp;quot;, connectionId);
+        Debug.WriteLine(output);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;h3&gt; Entity Framework 6&lt;/h3&gt;
+At the moment, Tattle doesn&amp;rsquo;t work with EF6. One of the reason is that Tattle is a custom provider and EF6 changed the way that it loads providers. EF6 only loads the providers once via factories for multiple DbContexts. EF5 on the other hand loaded them each time a new DbContext was constructed.
+&lt;h3&gt;Going Forward&lt;/h3&gt;
+I&amp;rsquo;m still working on Tattle and it has a MIT licence. The next version of Tattle will include EF6 support, a NuGet package and end to end tests. If you want to help out, head on over to &lt;a href=&#34;https://github.com/choudeshell/tattle/issues&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>OWIN! Embrace Open Source</title>
+      <link>http://localhost:1313/post/owin_embrace/</link>
+      <pubDate>Tue, 03 Dec 2013 14:52:55 -0400</pubDate>
+      
+      <guid>http://localhost:1313/post/owin_embrace/</guid>
+      <description>&lt;p&gt;Below is the talk I gave at the &lt;a href=&#34;http://phillydotnet.org/&#34;&gt;PhillyDotNet&lt;/a&gt; 2013.2 Code Camp. Since I did some live-coding; the code didn&amp;rsquo;t end up as clean as I planned. Instead, please reference the tutorial from the ASP.NET site, &lt;a href=&#34;http://www.asp.net/aspnet/overview/owin-and-katana/getting-started-with-owin-and-katana&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;ba4e31a037ad0131a20f6279b543adb8&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
