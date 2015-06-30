@@ -67,7 +67,7 @@ body {
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
-  color: #749E39;
+    color: #5DA917;
   text-decoration: none;
 }
 a strong {
@@ -259,7 +259,7 @@ tbody tr:nth-child(odd) th {
  */
 
 .lead {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 300;
 }
 
@@ -331,10 +331,15 @@ tbody tr:nth-child(odd) th {
 .page,
 .post {
   margin-bottom: 4em;
+  font-size: 0.9rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight:300;
+  
 }
 
 .post h1
 {
+  font-size: 1.4rem;
   font-weight: 300;
 }
 
@@ -342,7 +347,7 @@ tbody tr:nth-child(odd) th {
 .page-title,
 .post-title,
 .post-title a {
-   color: #749E39;
+     color: #58A900;
 }
 .page-title,
 .post-title {

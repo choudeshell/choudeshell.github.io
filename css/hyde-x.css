@@ -4,6 +4,7 @@
 
 .posts {
   list-style: none;
+  font-size:0.9rem;
 }
 
 .posts li {
@@ -128,6 +129,9 @@ a.label:focus {
   color: #fff;
   text-decoration: none;
   cursor: pointer;
+    font-size: 0.7rem;
+  padding-top: 3px;
+  font-weight: 300;
 }
 
 /* Red */

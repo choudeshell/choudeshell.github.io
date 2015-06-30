@@ -53,12 +53,17 @@ html {
  * out above content in mobile and later moves to the side with wider viewports.
  */
 
+.sidebar-about
+{
+    margin-top: 50%;
+}
+
 .sidebar {
   text-align: center;
   padding: 2rem 1rem;
-  color: rgba(255,255,255,.5);
+  color: #434343;
   background: rgba(1, 0, 10, 0.89);
-  background: #2D343E;
+  background: #fff;
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -73,7 +78,7 @@ html {
 
 /* Sidebar links */
 .sidebar a {
-  color: #fff;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .sidebar a:hover
@@ -143,7 +148,7 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 64em) {
   .content {
-    margin-left: 22rem;
+    margin-left: 18rem;
     margin-right: 4rem;
   }
 }
