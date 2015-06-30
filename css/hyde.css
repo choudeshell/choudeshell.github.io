@@ -36,7 +36,7 @@ html {
 }
 @media (min-width: 48em) {
   html {
-    font-size: 16px;
+    font-size: 19px;
   }
 }
 @media (min-width: 58em) {
@@ -59,6 +59,7 @@ html {
 }
 
 .sidebar {
+  border-top:3px solid #77005F;
   text-align: center;
   padding: 2rem 1rem;
   color: #434343;
