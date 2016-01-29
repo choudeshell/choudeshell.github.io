@@ -52,7 +52,9 @@ ul, ol {
   ul ul, ul ol, ol ul, ol ol {
     margin: 10px 0 0 20px; }
   ul li, ol li {
-    margin: 0 0 2px; }
+    margin: 20px 0 2px;
+    line-height: 1.8;
+ }
     ul li:last-of-type, ol li:last-of-type {
       margin-bottom: 0; }
 
