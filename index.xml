@@ -7,24 +7,8 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Chris Houdeshell</copyright>
-    <lastBuildDate>Wed, 03 Jun 2015 15:20:05 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 03 May 2014 13:57:00 -0400</lastBuildDate>
     <atom:link href="http://choudeshell.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>About</title>
-      <link>http://choudeshell.com/about/</link>
-      <pubDate>Wed, 03 Jun 2015 15:20:05 -0400</pubDate>
-      
-      <guid>http://choudeshell.com/about/</guid>
-      <description>&lt;p&gt;Chris Houdeshell is a bit herder, a pointer wrecker, and a HTTP (with TLS) slinger.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://choudeshell.com/images/me.png&#34; height=&#34;250px&#34; style=&#34;display:inline; float:right&#34;/&gt; He is comfortable in both system languages and languages that make the cloud fluffy. He loves all modern technology but a special place is reserved in his heart for IoT/microcontrollers, distributed systems and anything that has a content-type.&lt;/p&gt;
-
-&lt;p&gt;During the day, Chris conjures up software as an Assistant Vice President at &lt;a href=&#34;http://www.energycap.com&#34;&gt;EnergyCAP&lt;/a&gt;. Chris works on all layers of that stack and all avenues that come along with it &amp;ndash; from DevOps to project management.&lt;/p&gt;
-
-&lt;p&gt;Chris also drinks a bit too much coffee while rambling on about technology. If you are willing to have a conversation &amp;ndash; he is ready to buy you a cup. Just email.&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>Tattle - Yet Another Entity Framework Event Exposer</title>
@@ -211,6 +195,22 @@ I&amp;rsquo;m still working on Tattle and it has a MIT licence. The next version
       <description>&lt;p&gt;Below is the talk I gave at the &lt;a href=&#34;http://phillydotnet.org/&#34;&gt;PhillyDotNet&lt;/a&gt; 2013.2 Code Camp. Since I did some live-coding; the code didn&amp;rsquo;t end up as clean as I planned. Instead, please reference the tutorial from the ASP.NET site, &lt;a href=&#34;http://www.asp.net/aspnet/overview/owin-and-katana/getting-started-with-owin-and-katana&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;ba4e31a037ad0131a20f6279b543adb8&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://choudeshell.com/about/</link>
+      <pubDate>Wed, 03 Jun 2015 15:20:05 -0400</pubDate>
+      
+      <guid>http://choudeshell.com/about/</guid>
+      <description>&lt;p&gt;Chris Houdeshell is a bit herder, a pointer wrecker, and a HTTP (with TLS) slinger.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://choudeshell.com/images/me.png&#34; height=&#34;250px&#34; style=&#34;display:inline; float:right&#34;/&gt; He is comfortable in both system languages and languages that make the cloud fluffy. He loves all modern technology but a special place is reserved in his heart for IoT/microcontrollers, distributed systems and anything that has a content-type.&lt;/p&gt;
+
+&lt;p&gt;During the day, Chris conjures up software as an Assistant Vice President at &lt;a href=&#34;http://www.energycap.com&#34;&gt;EnergyCAP&lt;/a&gt;. Chris works on all layers of that stack and all avenues that come along with it &amp;ndash; from DevOps to project management.&lt;/p&gt;
+
+&lt;p&gt;Chris also drinks a bit too much coffee while rambling on about technology. If you are willing to have a conversation &amp;ndash; he is ready to buy you a cup. Just email.&lt;/p&gt;
 </description>
     </item>
     

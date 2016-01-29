@@ -3,13 +3,8 @@
   
   <url>
     <loc>http://choudeshell.com/</loc>
-    <lastmod>2015-06-03T15:20:05-04:00</lastmod>
+    <lastmod>2014-05-03T13:57:00-04:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://choudeshell.com/about/</loc>
-    <lastmod>2015-06-03T15:20:05-04:00</lastmod>
   </url>
   
   <url>
@@ -20,6 +15,11 @@
   <url>
     <loc>http://choudeshell.com/post/owin_embrace/</loc>
     <lastmod>2013-12-03T14:52:55-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://choudeshell.com/about/</loc>
+    <lastmod>2015-06-03T15:20:05-04:00</lastmod>
   </url>
   
 </urlset>
