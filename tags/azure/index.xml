@@ -21,11 +21,11 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Working for a small business, costs are always a concern. While the cloud enables us to provision outside of our data center and respond to change quickly, fluid costs limit the full potential of us using the cloud. Hopefully, Russinovich and Snover cover licensing early, allowing small business to budget for Azure Stack and bring more of a fixed cost to the (hybrid) cloud.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;DocumentDB should be delivered early in the Technical Preview cadence. DocumentDB is one of few Azure services that really doesn&amp;rsquo;t have a great on-premise alternative. While this may be due to the .NET-isms native to DocumentDB, by releasing an early Azure Stack version, Microsoft will finally erase one of DocumentDB&amp;rsquo;s few downsides.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;DocumentDB should be delivered early in the Technical Preview cadence. DocumentDB is one of few Azure services that doesn&amp;rsquo;t have a great on-premise alternative. While this may be due to the .NET-isms native to DocumentDB, releasing an early Azure Stack version, Microsoft will finally erase one of DocumentDB&amp;rsquo;s few downsides.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Azure Active Directory B2C should also be delivered early in the Technical Preview cadence. With Microsoft pounding nail after nail into AD ACS&amp;rsquo; coffin, an on-premise alternative is needed. It is a given that Azure Stack TP1 will include at least some AD integration, due to the portal relying on AD ACLs.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Azure Active Directory B2C. With Microsoft pounding nail after nail into AD ACS&amp;rsquo; coffin and officially deprecating it, an on-premise alternative is needed. It is a given that Azure Stack TP1 will include at least some AD integration, due to the portal relying on AD ACLs.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Early Azure fail-over/scale-out. Azure Resource Manager templates are currently touted orchestration tool for Azure. I hope Azure Stack can automatically produce these templates and deploy a copy of the resource group to Azure in case of a local failure or for hybrid cloud scale-out.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Early Azure fail-over/scale-out. Azure Resource Manager templates are the currently touted orchestration tool for Azure. I hope Azure Stack can automatically produce these templates and deploy a copy of the resource group to Azure in case of a local failure or for hybrid cloud scale-out.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
