@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Chris Houdeshell | Bit Herder</title>
-    <link>http://choudeshell.com/</link>
-    <description>Recent content on Chris Houdeshell | Bit Herder</description>
+    <title>Azure Stack on Chris Houdeshell | Bit Herder</title>
+    <link>http://choudeshell.com/tags/azure-stack/</link>
+    <description>Recent content in Azure Stack on Chris Houdeshell | Bit Herder</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Chris Houdeshell</copyright>
     <lastBuildDate>Thu, 28 Jan 2016 22:13:47 -0500</lastBuildDate>
-    <atom:link href="http://choudeshell.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://choudeshell.com/tags/azure-stack/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Azure Stack Technical Preview 1 - Prethoughts</title>
@@ -27,22 +27,6 @@
 
 &lt;li&gt;&lt;p&gt;Early Azure fail-over/scale-out. Azure Resource Manager templates are currently touted orchestration tool for Azure. I hope Azure Stack can automatically produce these templates and deploy a copy of the resource group to Azure in case of a local failure or for hybrid cloud scale-out.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>http://choudeshell.com/about/</link>
-      <pubDate>Wed, 03 Jun 2015 15:20:05 -0400</pubDate>
-      
-      <guid>http://choudeshell.com/about/</guid>
-      <description>&lt;p&gt;Hello. I&amp;rsquo;m Chris Houdeshell. I&amp;rsquo;m a bit herder, a pointer wrecker, and HTTP is my best friend.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://choudeshell.com/images/me.png&#34; height=&#34;250px&#34; style=&#34;display:inline; float:right&#34;/&gt; I&amp;rsquo;m comfortable in both system languages and languages that make the cloud fluffy. I love all modern technology but a special place is reserved in his heart for IoT/microcontrollers, distributed systems and anything that has a content-type.&lt;/p&gt;
-
-&lt;p&gt;During the day, I conjures up software as an Assistant Vice President at &lt;a href=&#34;http://www.energycap.com&#34;&gt;EnergyCAP&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I also drinks a bit too much coffee while rambling on about technology. If you are willing to have a conversation &amp;ndash; I am ready to buy you a cup. Just email.&lt;/p&gt;
 </description>
     </item>
     

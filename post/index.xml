@@ -7,194 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Chris Houdeshell</copyright>
-    <lastBuildDate>Sat, 03 May 2014 13:57:00 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 28 Jan 2016 22:13:47 -0500</lastBuildDate>
     <atom:link href="http://choudeshell.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Tattle - Yet Another Entity Framework Event Exposer</title>
-      <link>http://choudeshell.com/post/tattle/</link>
-      <pubDate>Sat, 03 May 2014 13:57:00 -0400</pubDate>
+      <title>Azure Stack Technical Preview 1 - Prethoughts</title>
+      <link>http://choudeshell.com/post/azure-stack-preview/</link>
+      <pubDate>Thu, 28 Jan 2016 22:13:47 -0500</pubDate>
       
-      <guid>http://choudeshell.com/post/tattle/</guid>
-      <description>&lt;p&gt;Debugging Entity Framework generated SQL is tough at times. The sometimes-elegant SQL is filled with parameters in every facet. One of the ways to view that SQL is to call .ToString() on any IQueryable. If you want to print the SQL out to the debug console in Visual Studio or even log the SQL &amp;ndash; you&amp;rsquo;ll have to create a wrapped provider.&lt;/p&gt;
+      <guid>http://choudeshell.com/post/azure-stack-preview/</guid>
+      <description>&lt;p&gt;On Tuesday, &lt;a href=&#34;https://azure.microsoft.com/en-us/blog/announcing-the-first-technical-preview-of-microsoft-azure-stack/&#34;&gt;Microsoft&lt;/a&gt; announced that the first Technical Preview of Azure Stack will be available Friday, January 29. Like many others, I&amp;rsquo;ve already provisioned a machine. The thought of true private-public hybrid cloud excites me. While information is currently limited, here are my thoughts before the release.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://code.msdn.microsoft.com/EFProviderWrappers-c0b88f32&#34;&gt;Microsoft provides a logging and cache provider&lt;/a&gt; example. Based off the idea of this example, I created a wrapped provider of my own that should simplify tracing and logging of the generate SQL.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/choudeshell/tattle&#34;&gt;Tattle&lt;/a&gt; provides and easy to use abstraction. It is as simple as implementing an ITattler and a few methods. The methods and a description of the &amp;lsquo;events&amp;rsquo; are:
 &lt;ul&gt;
-    &lt;li&gt;CommandResult - Fire when a command is completed&lt;/li&gt;
-    &lt;li&gt;DbConnectionClose - Fired when a connection is closed&lt;/li&gt;
-    &lt;li&gt;DbConnectionStart - Fired when a connection is opened&lt;/li&gt;
-    &lt;li&gt;DtcTransactionComplete - Fired when a Distrubted Transaction Coordinator transactions is completed (committed)&lt;/li&gt;
-    &lt;li&gt;DtcTransactionEnlist - Fired when a DTC transaction is created&lt;/li&gt;
-    &lt;li&gt;StatementException - Fired when a DbCommand throws an exception&lt;/li&gt;
-    &lt;li&gt;StatementExecute - Fired after a DbCommand is executed&lt;/li&gt;
-    &lt;li&gt;StatementRowCount - Fired after a DbCommand is executed&lt;/li&gt;
-    &lt;li&gt;TransactionBegin - When a generic/SQL transaction is started&lt;/li&gt;
-    &lt;li&gt;TransactionComplete - Fired when a transaction is committed&lt;/li&gt;
-    &lt;li&gt;TransactionDispose - Fired when a transaction is GC&lt;/li&gt;
-    &lt;li&gt;TransactionRollback - Fired when a transaction is rolled back&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Working for a small business, costs are always a concern. While the cloud enables us to provision outside of our data center and respond to change quickly, fluid costs limit the full potential of us using the cloud. Hopefully, Russinovich and Snover cover licensing early, allowing small business to budget for Azure Stack and bring more of a fixed cost to the (hybrid) cloud.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;DocumentDB should be delivered early in the Technical Preview cadence. DocumentDB is one of few Azure services that really doesn&amp;rsquo;t have a great on-premise alternative. While this may be due to the .NET-isms native to DocumentDB, by releasing an early Azure Stack version, Microsoft will finally erase one of DocumentDB&amp;rsquo;s few downsides.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Azure Active Directory B2C should also be delivered early in the Technical Preview cadence. With Microsoft pounding nail after nail into AD ACS&amp;rsquo; coffin, an on-premise alternative is needed. It is a given that Azure Stack TP1 will include at least some AD integration, due to the portal relying on AD ACLs.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Early Azure fail-over/scale-out. Azure Resource Manager templates are currently touted orchestration tool for Azure. I hope Azure Stack can automatically produce these templates and deploy a copy of the resource group to Azure in case of a local failure or for hybrid cloud scale-out.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-A full implementation of an ITattler:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;public class TraceTattler:ITattler
-{
-    /// &amp;amp;lt;summary&amp;amp;gt;
-    /// Default constructor
-    /// &amp;amp;lt;/summary&amp;amp;gt;
-    public TraceTattler()
-    {
-
-    }
-
-    /// &amp;amp;lt;summary&amp;amp;gt;
-    /// Prints the command results
-    /// &amp;amp;lt;/summary&amp;amp;gt;
-    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
-    /// &amp;amp;lt;param name=&amp;quot;milliseconds&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
-    /// &amp;amp;lt;param name=&amp;quot;rowCount&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
-    public void CommandResult(Guid connectionId, long milliseconds, int? rowCount)
-    {
-        var output = String.Format(&amp;quot;Connection: {0}tDuration: {1}tRowCount: {2}&amp;quot;, connectionId, milliseconds, rowCount);
-        Debug.WriteLine(output);
-    }
-
-    /// &amp;amp;lt;summary&amp;amp;gt;
-    /// Fired when the connection is &#39;close&#39; (put back in the pool)
-    /// &amp;amp;lt;/summary&amp;amp;gt;
-    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
-    public void DbConnectionClose(Guid connectionId)
-    {
-         var output = String.Format(&amp;quot;Connection Closed: {0}t&amp;quot;, connectionId);
-        Debug.WriteLine(output);
-    }
-
-    /// &amp;amp;lt;summary&amp;amp;gt;
-    /// Fired when the connection is opened
-    /// &amp;amp;lt;/summary&amp;amp;gt;
-    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
-    public void DbConnectionStart(Guid connectionId)
-    {
-        var output = String.Format(&amp;quot;Connection Started: {0}t&amp;quot;, connectionId);
-        Debug.WriteLine(output);
-    }
-
-    /// &amp;amp;lt;summary&amp;amp;gt;
-    /// Fired when a distributed transaction is complete
-    /// &amp;amp;lt;/summary&amp;amp;gt;
-    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
-    /// &amp;amp;lt;param name=&amp;quot;status&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
-    public void DtcTransactionComplete(Guid connectionId, System.Transactions.TransactionStatus status)
-    {
-        var output = String.Format(&amp;quot;DTC Transaction Begin: {0}tStatus: {1}&amp;quot;, connectionId, status.ToString());
-        Debug.WriteLine(output);
-    }
-
-    /// &amp;amp;lt;summary&amp;amp;gt;
-    /// Fired when a distributed transaction is created
-    /// &amp;amp;lt;/summary&amp;amp;gt;
-    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
-    /// &amp;amp;lt;param name=&amp;quot;isolationLevel&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
-    public void DtcTransactionEnlist(Guid connectionId, System.Transactions.IsolationLevel isolationLevel)
-    {
-        var output = String.Format(&amp;quot;DTC Transaction Enlisted: {0}tStatus: {1}&amp;quot;, connectionId, isolationLevel.ToString());
-        Debug.WriteLine(output);
-    }
-
-    /// &amp;amp;lt;summary&amp;amp;gt;
-    /// Fired when the provider implimentor triggers an exception (ie bad sql)
-    /// &amp;amp;lt;/summary&amp;amp;gt;
-    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
-    /// &amp;amp;lt;param name=&amp;quot;exception&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
-    public void StatementException(Guid connectionId, Exception exception)
-    {
-        var output = String.Format(&amp;quot;Statement Exception: {0}tConnection: {1}&amp;quot;, exception.ToString(), connectionId);
-        Debug.WriteLine(output);
-    }
-
-    /// &amp;amp;lt;summary&amp;amp;gt;
-    /// Fired when a statement is executed
-    /// &amp;amp;lt;/summary&amp;amp;gt;
-    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
-    /// &amp;amp;lt;param name=&amp;quot;statementId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
-    /// &amp;amp;lt;param name=&amp;quot;dbCommand&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
-    public void StatementExecute(Guid connectionId, Guid statementId, System.Data.Common.DbCommand dbCommand)
-    {
-        var output = String.Format(&amp;quot;Connection: {0}tID: {1}tStatement: {2}{3}&amp;quot;, connectionId, statementId,Environment.NewLine,((SqlCommand) dbCommand).ToSqlString());
-        Debug.WriteLine(output);
-    }
-
-    /// &amp;amp;lt;summary&amp;amp;gt;
-    /// Fired when a statement is executed returning the effected record count
-    /// &amp;amp;lt;/summary&amp;amp;gt;
-    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
-    /// &amp;amp;lt;param name=&amp;quot;statementId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
-    /// &amp;amp;lt;param name=&amp;quot;rowCount&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
-    public void StatementRowCount(Guid connectionId, Guid statementId, int rowCount)
-    {
-         var output = String.Format(&amp;quot;Statement Row Count: {0}tConnection: {1}tID: {2}&amp;quot;, rowCount, connectionId, statementId);
-        Debug.WriteLine(output);
-    }
-
-    /// &amp;amp;lt;summary&amp;amp;gt;
-    /// Fired when a transaction is opened
-    /// &amp;amp;lt;/summary&amp;amp;gt;
-    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
-    /// &amp;amp;lt;param name=&amp;quot;isolationLevel&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
-    public void TransactionBegin(Guid connectionId, System.Data.IsolationLevel isolationLevel)
-    {            
-        var output = String.Format(&amp;quot;Transaction Begin: {0}tIsolationLevel: {1}&amp;quot;, connectionId, isolationLevel);
-        Debug.WriteLine(output);
-    }
-
-    /// &amp;amp;lt;summary&amp;amp;gt;
-    /// Fired when a transaction is commited
-    /// &amp;amp;lt;/summary&amp;amp;gt;
-    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
-    public void TransactionCommit(Guid connectionId)
-    {
-        var output = String.Format(&amp;quot;Transaction Commit: {0}&amp;quot;, connectionId);
-        Debug.WriteLine(output);
-    }
-
-    /// &amp;amp;lt;summary&amp;amp;gt;
-    /// Fired when a transaction is closed
-    /// &amp;amp;lt;/summary&amp;amp;gt;
-    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
-    public void TransactionDispose(Guid connectionId)
-    {
-        var output = String.Format(&amp;quot;Transaction Dispsoe: {0}&amp;quot;, connectionId);
-        Debug.WriteLine(output);
-    }
-
-    /// &amp;amp;lt;summary&amp;amp;gt;
-    /// Fired when a transaction is rolled back
-    /// &amp;amp;lt;/summary&amp;amp;gt;
-    /// &amp;amp;lt;param name=&amp;quot;connectionId&amp;quot;&amp;amp;gt;&amp;amp;lt;/param&amp;amp;gt;
-    public void TransactionRollBack(Guid connectionId)
-    {
-        var output = String.Format(&amp;quot;Transaction Rollback: {0}&amp;quot;, connectionId);
-        Debug.WriteLine(output);
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;h3&gt; Entity Framework 6&lt;/h3&gt;
-At the moment, Tattle doesn&amp;rsquo;t work with EF6. One of the reason is that Tattle is a custom provider and EF6 changed the way that it loads providers. EF6 only loads the providers once via factories for multiple DbContexts. EF5 on the other hand loaded them each time a new DbContext was constructed.
-&lt;h3&gt;Going Forward&lt;/h3&gt;
-I&amp;rsquo;m still working on Tattle and it has a MIT licence. The next version of Tattle will include EF6 support, a NuGet package and end to end tests. If you want to help out, head on over to &lt;a href=&#34;https://github.com/choudeshell/tattle/issues&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>OWIN! Embrace Open Source</title>
-      <link>http://choudeshell.com/post/owin_embrace/</link>
-      <pubDate>Tue, 03 Dec 2013 14:52:55 -0400</pubDate>
-      
-      <guid>http://choudeshell.com/post/owin_embrace/</guid>
-      <description>&lt;p&gt;Below is the talk I gave at the &lt;a href=&#34;http://phillydotnet.org/&#34;&gt;PhillyDotNet&lt;/a&gt; 2013.2 Code Camp. Since I did some live-coding; the code didn&amp;rsquo;t end up as clean as I planned. Instead, please reference the tutorial from the ASP.NET site, &lt;a href=&#34;http://www.asp.net/aspnet/overview/owin-and-katana/getting-started-with-owin-and-katana&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;ba4e31a037ad0131a20f6279b543adb8&#34; data-ratio=&#34;1.77777777777778&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
