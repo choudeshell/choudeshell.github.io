@@ -5,7 +5,7 @@ html, body {
   height: 100%; }
 
 body {
-  background: #f5f5f5;
+  background: #fcfcfc;
   color: #424242;
   font-family: "Open Sans", arial, sans-serif;
   font-size: 18px; }
@@ -193,7 +193,7 @@ table {
   text-transform: uppercase; }
   .site-title a {
     float: left;
-    background: #292929;
+    background: #2f353e;
     color: #FEFEFE;
     padding: 5px 10px 6px; }
     .site-title a:hover {
@@ -226,7 +226,7 @@ table {
   margin: 0 40px; }
 
 .post-header {
-  border-bottom: 6px solid #303030;
+  border-bottom: 6px solid #2f353e;
   margin: 0 0 20px;
   padding: 0 0 20px;
   text-align: center;
@@ -256,13 +256,6 @@ table {
   .post-date a:hover,
   .blog-description a:hover {
     color: #03AF7D; }
-  .post-date:after,
-  .blog-description:after {
-    border-bottom: 1px dotted #303030;
-    content: "";
-    display: block;
-    margin: 40px auto 0;
-    width: 100px; }
 
 .post-content a:hover {
   border-bottom: 1px dotted #03AF7D;
