@@ -5,7 +5,7 @@ html, body {
   height: 100%; }
 
 body {
-  background: #FEFEFE;
+  background: #f5f5f5;
   color: #424242;
   font-family: "Open Sans", arial, sans-serif;
   font-size: 18px; }
@@ -193,7 +193,7 @@ table {
   text-transform: uppercase; }
   .site-title a {
     float: left;
-    background: #03AF7D;
+    background: #292929;
     color: #FEFEFE;
     padding: 5px 10px 6px; }
     .site-title a:hover {
