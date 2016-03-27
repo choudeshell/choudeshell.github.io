@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Azure Stack on Chris Houdeshell | Bit Herder</title>
-    <link>http://choudeshell.com/tags/azure-stack/</link>
+    <link>https://choudeshell.com/tags/azure-stack/</link>
     <description>Recent content in Azure Stack on Chris Houdeshell | Bit Herder</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Chris Houdeshell</copyright>
     <lastBuildDate>Thu, 28 Jan 2016 22:13:47 -0500</lastBuildDate>
-    <atom:link href="http://choudeshell.com/tags/azure-stack/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://choudeshell.com/tags/azure-stack/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Azure Stack Technical Preview 1 - Thoughts</title>
-      <link>http://choudeshell.com/post/azure-stack-preview/</link>
+      <link>https://choudeshell.com/post/azure-stack-preview/</link>
       <pubDate>Thu, 28 Jan 2016 22:13:47 -0500</pubDate>
       
-      <guid>http://choudeshell.com/post/azure-stack-preview/</guid>
+      <guid>https://choudeshell.com/post/azure-stack-preview/</guid>
       <description>&lt;p&gt;On Tuesday, &lt;a href=&#34;https://azure.microsoft.com/en-us/blog/announcing-the-first-technical-preview-of-microsoft-azure-stack/&#34;&gt;Microsoft&lt;/a&gt; announced that the first Technical Preview of Azure Stack will be available Friday, January 29. Like many others, I&amp;rsquo;ve already provisioned a machine. The thought of true private-public hybrid cloud excites me. While information is currently limited, here are my thoughts before the release.&lt;/p&gt;
 
 &lt;ul&gt;
