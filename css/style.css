@@ -5,7 +5,7 @@ html, body {
   height: 100%; }
 
 body {
-  background: #fcfcfc;
+  background: #fff;
   color: #424242;
   font-family: "Open Sans", arial, sans-serif;
   font-size: 18px; }
@@ -41,8 +41,13 @@ p {
   margin: 0 0 30px; }
 
 a {
-  color: #CC005C;
+  color: #99BC46;
   text-decoration: none; }
+  
+  .post-content  a
+  {
+    border-bottom: 1px dotted #99BC46;
+  }
 
 ul, ol {
   list-style-position: inside;
@@ -157,14 +162,13 @@ table {
     background: #CC005C; }
 
 .button-square {
-  background: #CC005C;
-  color: #FFF;
+  color: #868686;
   float: left;
-  font-size: 20px;
+  font-size: 18px;
   margin: 0 0 0 10px;
-  padding: 3px 8px 4px; }
+  padding: 5px 10px 6px; }
   .button-square:hover {
-    background: #303030; }
+    color: #99BC46; }
 
 .error {
   text-align: center; }
@@ -179,7 +183,7 @@ table {
   padding: 40px 0 0;
   overflow: auto;
   text-align: center;
-  text-transform: uppercase; }
+   }
 
 .site-title-wrapper {
   display: table;
@@ -193,11 +197,10 @@ table {
   text-transform: uppercase; }
   .site-title a {
     float: left;
-    background: #2f353e;
-    color: #FEFEFE;
+    color: #868686;
     padding: 5px 10px 6px; }
     .site-title a:hover {
-      background: #303030; }
+      color: #99BC46; }
 
 .site-logo {
   display: block; }
@@ -210,8 +213,8 @@ table {
 
 .site-nav-item {
   display: inline-block;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 400;
   margin: 0 10px; }
   .site-nav-item a:hover {
     color: #424242; }
@@ -255,10 +258,12 @@ table {
     color: #AEADAD; }
   .post-date a:hover,
   .blog-description a:hover {
-    color: #CC005C; }
+    color: #99BC46;
+    border-bottom: 1px dotted #99BC46;
+     }
 
 .post-content a:hover {
-  border-bottom: 1px dotted #CC005C;
+  border-bottom: 1px dotted #99BC46;
   padding: 0 0 2px; }
 .post-content:last-child {
   margin-bottom: 0; }
@@ -283,7 +288,7 @@ table {
 .share {
   float: right; }
   .share a {
-    background: #CC005C;
+    background: #99BC46;
     color: #FFF;
     display: inline-block;
     font-size: 16px;
@@ -335,10 +340,10 @@ table {
     color: #424242;
     padding: 20px 5px; }
     .post-stub a:hover {
-      color: #CC005C;
+      color: #99BC46;
       padding: 20px 12px; }
       .post-stub a:hover .post-stub-tag {
-        background: #CC005C; }
+        background: #99BC46; }
 
 .post-stub-tag {
   background: #303030;
