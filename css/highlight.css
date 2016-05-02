@@ -1,9 +1,9 @@
 .hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  color: #333;
-  -webkit-text-size-adjust: none;
+    display: block;
+    overflow-x: auto;
+    padding: 20px !important;
+    color: #000;
+    background: #F9F9F9 !important;
 }
 
 .hljs-comment,
