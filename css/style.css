@@ -41,12 +41,12 @@ p {
   margin: 0 0 30px; }
 
 a {
-  color: #99BC46;
+  color: #eb7859;
   text-decoration: none; }
   
   .post-content  a
   {
-    border-bottom: 1px dotted #99BC46;
+    border-bottom: 1px dotted #eb7859;
   }
 
 ul, ol {
@@ -166,7 +166,7 @@ table {
   margin: 0 0 0 10px;
   padding: 11px 10px 6px; }
   .button-square:hover {
-    color: #99BC46; }
+    color: #eb7859; }
 
 .error {
   text-align: center; }
@@ -200,7 +200,7 @@ table {
     color: #868686;
     padding: 5px 10px 6px; }
     .site-title a:hover {
-      color: #99BC46; }
+      color: #eb7859; }
 
 .site-logo {
   display: block; }
@@ -258,12 +258,12 @@ table {
     color: #AEADAD; }
   .post-date a:hover,
   .blog-description a:hover {
-    color: #99BC46;
-    border-bottom: 1px dotted #99BC46;
+    color: #eb7859;
+    border-bottom: 1px dotted #eb7859;
      }
 
 .post-content a:hover {
-  border-bottom: 1px dotted #99BC46;
+  border-bottom: 1px dotted #eb7859;
   padding: 0 0 2px; }
 .post-content:last-child {
   margin-bottom: 0; }
@@ -288,7 +288,7 @@ table {
 .share {
   float: right; }
   .share a {
-    background: #99BC46;
+    background: #eb7859;
     color: #FFF;
     display: inline-block;
     font-size: 16px;
@@ -340,10 +340,10 @@ table {
     color: #424242;
     padding: 20px 5px; }
     .post-stub a:hover {
-      color: #99BC46;
+      color: #eb7859;
       padding: 20px 12px; }
       .post-stub a:hover .post-stub-tag {
-        background: #99BC46; }
+        background: #eb7859; }
 
 .post-stub-tag {
   background: #303030;
