@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Chris Houdeshell</title>
-    <link>https://www.choudeshell.com/post/</link>
-    <description>Recent content in Posts on Chris Houdeshell</description>
+    <title>Devel on Chris Houdeshell</title>
+    <link>https://www.choudeshell.com/tags/devel/</link>
+    <description>Recent content in Devel on Chris Houdeshell</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Chris Houdeshell</copyright>
     <lastBuildDate>Mon, 02 May 2016 22:13:47 -0500</lastBuildDate>
-    <atom:link href="https://www.choudeshell.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.choudeshell.com/tags/devel/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Primitives</title>
@@ -23,23 +23,6 @@
 &lt;p&gt;With .NET Core changing a such a fundamental feature, I&amp;rsquo;m hesitant to trust that the .NET Core teams fully understands where .NET Core fits into the development world and aren&amp;rsquo;t merely reacting to pressure from other internal teams. That said, I don&amp;rsquo;t necessarily think that switching from a JSON-based to XML-based project structure is a bad thing &amp;ndash; just a shift in the direction I thought the team was headed. While I may be reading too much into things, it mirrors the day-job quite well.&lt;/p&gt;
 
 &lt;p&gt;At the day-job, we having been working on a new major re-arch of our software for the last year. While we are very close to a &amp;lsquo;beta-able&amp;rsquo; version, we frequently change our defined primitives &amp;ndash; from styling to code-based constructs. These primitives don&amp;rsquo;t represent much on their own, but they are the fundamental building blocks used to create amazing features. Changing one of these primitives may not having many repercussions but change enough  of them and there are major consequences &amp;ndash; as demonstrated by the lengthy gap between ASP.NET Core RC1 and RC2. And probably the lengthy gap between this post and our own release candidate.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Azure Stack Technical Preview 1 - Thoughts</title>
-      <link>https://www.choudeshell.com/post/azure-stack-preview/</link>
-      <pubDate>Thu, 28 Jan 2016 22:13:47 -0500</pubDate>
-      
-      <guid>https://www.choudeshell.com/post/azure-stack-preview/</guid>
-      <description>&lt;p&gt;On Tuesday, &lt;a href=&#34;https://azure.microsoft.com/en-us/blog/announcing-the-first-technical-preview-of-microsoft-azure-stack/&#34;&gt;Microsoft&lt;/a&gt; announced that the first Technical Preview of Azure Stack will be available Friday, January 29. Like many others, I&amp;rsquo;ve already provisioned a machine. The thought of true private-public hybrid cloud excites me. While information is currently limited, here are my thoughts before the release.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Working for a small business, costs are always a concern. While the cloud enables us to provision outside of our data center and respond to change quickly, fluid costs limit the full potential of us using the cloud. Hopefully, Russinovich and Snover cover licensing early, allowing small business to budget for Azure Stack and bring more of a fixed cost to the (hybrid) cloud.&lt;/li&gt;
-&lt;li&gt;DocumentDB should be delivered early in the Technical Preview cadence. DocumentDB is one of few Azure services that doesn&amp;rsquo;t have a great on-premise alternative. While this may be due to the .NET-isms native to DocumentDB, releasing an early Azure Stack version, Microsoft will finally erase one of DocumentDB&amp;rsquo;s few downsides.&lt;/li&gt;
-&lt;li&gt;Azure Active Directory B2C. With Microsoft pounding nail after nail into AD ACS&amp;rsquo; coffin and officially deprecating it, an on-premise alternative is needed. It is a given that Azure Stack TP1 will include at least some AD integration, due to the portal relying on AD ACLs.&lt;/li&gt;
-&lt;li&gt;Early Azure fail-over/scale-out. Azure Resource Manager templates are the currently touted orchestration tool for Azure. I hope Azure Stack can automatically produce these templates and deploy a copy of the resource group to Azure in case of a local failure or for hybrid cloud scale-out.&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     
