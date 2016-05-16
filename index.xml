@@ -7,24 +7,8 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Chris Houdeshell</copyright>
-    <lastBuildDate>Mon, 02 May 2016 22:13:47 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 28 Jan 2016 22:13:47 -0500</lastBuildDate>
     <atom:link href="https://www.choudeshell.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Primitives</title>
-      <link>https://www.choudeshell.com/post/core-primitive/</link>
-      <pubDate>Mon, 02 May 2016 22:13:47 -0500</pubDate>
-      
-      <guid>https://www.choudeshell.com/post/core-primitive/</guid>
-      <description>&lt;p&gt;&lt;em&gt;During the most recent &lt;a href=&#34;https://www.youtube.com/watch?v=P9HqMZviaMg&#34;&gt;ASP.NET Core Community Standup&lt;/a&gt;, it was announced that Visual Studio (and the related tooling around .NET Core) was switching back to XML-based project files for .NET Core. (I am neither excited nor saddened by the switch; I just preferred JSON based projects &amp;ndash; mostly for the sole reason that it isn&amp;rsquo;t XML.)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;.NET Core is built on a set of primitives, in which one of those was previously defining a new project file so it could easily be included in diverse environments (including being trivially cross-platform since it was simplified from CSPROJs).&lt;/p&gt;
-
-&lt;p&gt;With .NET Core changing a such a fundamental feature, I&amp;rsquo;m hesitant to trust that the .NET Core teams fully understands where .NET Core fits into the development world and aren&amp;rsquo;t merely reacting to pressure from other internal teams. That said, I don&amp;rsquo;t necessarily think that switching from a JSON-based to XML-based project structure is a bad thing &amp;ndash; just a shift in the direction I thought the team was headed. While I may be reading too much into things, it mirrors the day-job quite well.&lt;/p&gt;
-
-&lt;p&gt;At the day-job, we having been working on a new major re-arch of our software for the last year. While we are very close to a &amp;lsquo;beta-able&amp;rsquo; version, we frequently change our defined primitives &amp;ndash; from styling to code-based constructs. These primitives don&amp;rsquo;t represent much on their own, but they are the fundamental building blocks used to create amazing features. Changing one of these primitives may not have many repercussions but change enough  of them and there are major consequences &amp;ndash; as demonstrated by the lengthy gap between ASP.NET Core RC1 and RC2. And probably the lengthy gap between this post and our own release candidate.&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>Azure Stack Technical Preview 1 - Thoughts</title>
