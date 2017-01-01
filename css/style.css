@@ -263,7 +263,7 @@ a.moretag {
 }
 a.moretag,
 a.moretag:visited {
-    color: #009DDC;
+    color: #dc6262;
     border-bottom: 1px solid transparent
 }
 a.moretag:hover {
@@ -291,11 +291,13 @@ article p {
 }
 #content {
    max-width: 889px;
-    margin: 0 auto 60px
+       padding: 25px;
+    margin: 0 auto 10px
 }
 footer {
-    width: 100%;
-    padding: 20px
+   width:100%;
+   padding-top:10px;
+   background: #3d4143;
 }
 #footer-container {
     width: 1000px;
@@ -304,7 +306,7 @@ footer {
 .footer-column {
     width: 30%;
     float: left;
-    color: #7A7B7C;
+    color: #ececec;
     padding: 0 1%;
     font-size: .85em
 }
@@ -325,7 +327,7 @@ footer .menu-item a {
     cursor: pointer
 }
 footer .menu-item a:hover {
-    color: #fff;
+    color: #dc6262;
     text-decoration: underline
 }
 #mainmenu a,
@@ -342,25 +344,28 @@ footer .menu-item a:hover {
     padding-right: 7%;
 }
 #site-title {
-    margin-top: 25px;
-    float: left
+    margin-top: 30px;
+    float: left;
+    background: #3D4143;
+    padding: 15px;
 }
 #site-title a {
     font-size: 1.2em;
     color: #fff
 }
 #mainmenu {
-    margin-top: 35px;
+    margin-top: 55px;
     float: right
 }
 a{
-        color: #8FC847;
+        color: #dc6362;
+        text-decoration: none;
 }
 #mainmenu a {
     color: #fff
 }
 #mainmenu a:hover {
-    border-bottom: 1px solid #fff
+    border-bottom: 1px solid #dc6262
 }
 #mainmenu li {
     float: left;
@@ -370,8 +375,8 @@ a{
     margin-left: 24px
 }
 .header {    
-    margin-bottom: 60px;
-    background-color: #8fc847;
+    padding-bottom: 60px;
+    background: #3d4143;
 }
 .divider {
     margin-bottom: -30px;
@@ -414,23 +419,19 @@ a{
     float: right
 }
 .post-heading {
-    width: 50%;
-    margin-left: 25%;
-    display: table;
-    z-index: 1
+    background: #dc6262;
+    margin-bottom: 20px;
 }
 .post-heading h1 {
-    font-size: 2.2em;
-    font-weight: 400;
-    color: #434343;
-    display: table-cell;
+    font-size: 30px;
+    padding-top: 30px;
+    line-height: 30px;
+    color: #fff;
     vertical-align: middle;
-    font-size: 52px;
     font-weight: 100;
-    margin: 15px 0;
     text-align: center;
-    text-transform: uppercase;
     font-weight: 300;
+    padding-bottom: 30px;
 }
 .lower,
 input {
@@ -544,7 +545,7 @@ th {
 }
 .overlay ul li a:focus,
 .overlay ul li a:hover {
-    color: #849368
+    color: #dc6262;
 }
 .lower~.overlay-hugeinc {
     opacity: 0;
@@ -581,12 +582,14 @@ th {
 }
 .share-icons-body svg:hover,
 .share-icons-header svg:hover {
-    transform: scale(1.25)
+    fill:#fff;
 }
 .share-icons-header svg {
     width: 30px;
     height: 30px;
-    fill: #636363
+    fill: #8e1c1c;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .share-icons-footer svg {
     width: 30px;
@@ -607,11 +610,9 @@ th {
 }
 #copyright {
     width: 100%;
-    color: #7A7B7C;
+    color: #fff;
     font-family: inherit;
-    font-size: .65em;
-    margin-top: 40px;
-    padding-bottom: 40px
+    padding-bottom: 10px;
 }
 table {
     color: #333;
@@ -790,14 +791,11 @@ tr td:hover {
     }
     #mainmenu,
     .pagination {
-        display: none;
+            float: none;
+    margin: 0;
     }
     .post-heading {
-        height: 180px;
-        width: 50%;
-        margin-top: -1%;
-        margin-left: 25%;
-        display: table;
+
     }
     #branding,
     .footer-column {
@@ -816,4 +814,13 @@ tr td:hover {
         font-size: 18px;
         font-family: "Open Sans",arial,sans-serif;
     }
+}
+body
+{
+    background: #3d4143;
+}
+#container
+{
+    background:#fff;
+    padding-bottom: 25px;
 }
