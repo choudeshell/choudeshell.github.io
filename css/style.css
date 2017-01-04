@@ -365,7 +365,7 @@ a{
     color: #fff
 }
 #mainmenu a:hover {
-    border-bottom: 1px solid #dc6262
+    border-bottom: 1px solid #ffbe00
 }
 #mainmenu li {
     float: left;
@@ -419,14 +419,14 @@ a{
     float: right
 }
 .post-heading {
-    background: #2d3031;
-    margin-bottom: 20px;
+    background: #fff;
+    border-top:solid 5px #ffbe00;
 }
 .post-heading h1 {
     font-size: 30px;
     padding-top: 30px;
     line-height: 30px;
-    color: #fff;
+    color: #3e3e3e;
     vertical-align: middle;
     font-weight: 100;
     text-align: center;
@@ -582,7 +582,7 @@ th {
 }
 .share-icons-body svg:hover,
 .share-icons-header svg:hover {
-    fill:#fff;
+    fill:#ffbe00;
 }
 .share-icons-header svg {
     width: 30px;
@@ -599,12 +599,12 @@ th {
 }
 .share-icons-footer svg:hover {
     transform: scale(1.25);
-    fill: #fff
+    fill: #ffbe00;
 }
 .share-icons-body svg {
     width: 30px;
     height: 30px;
-    fill: #009DDC;
+    fill: #ffbe00;
     float: left;
     margin-right: 5px
 }
