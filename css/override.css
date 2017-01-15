@@ -1,0 +1,11 @@
+section.main .content .markdown li {
+    margin-bottom: 15px;
+}
+
+section.main .content .page-heading {
+    font-weight: 300;
+}
+
+a {
+    color: #21a256; 
+}
