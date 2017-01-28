@@ -7,5 +7,74 @@ section.main .content .page-heading {
 }
 
 a {
-    color: #21a256; 
+    color: #21a256;
+}
+
+a:hover {
+    color: #1c8c4a;
+}
+
+.page-heading {
+    font-size: 28px;
+    font-weight: 100;
+}
+
+.post-item {
+    margin-bottom: 150px;
+}
+
+.page-heading a {
+    color: #21a256;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+.page-heading a:hover {
+    color: #1c8c4a;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+section.main .content .page-heading {
+    font-size: 28px;
+    font-weight: 200;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+section.main .container .content .post-item {
+    list-style: none;
+}
+
+.post-date {
+    font-size: 15px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.moretag {
+    margin-top: 10px;
+    display: inline-block;
+    background: #21a256;
+    padding: 7px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.moretag:hover {
+    margin-top: 10px;
+    display: inline-block;
+    background: #1c8c4a;
+    padding: 7px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.featured {
+    margin-bottom: 10px;
+    display: block;
+}
+
+@media (min-width: 600px) {
+    section.header nav ul li:hover {
+        color: #21a256;
+    }
 }

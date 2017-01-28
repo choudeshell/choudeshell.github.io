@@ -33,7 +33,7 @@ a:active {
 }
 html {
   height: 100%;
-  font-size: 16px;
+  font-size: 18px;
 }
 body {
   display: -webkit-flex;
@@ -56,7 +56,7 @@ body {
   width: 100%;
   min-height: 100%;
   font-weight: 400;
-  font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
   color: #111;
   line-height: 1.6;
   text-rendering: optimizeLegibility !important;
@@ -146,7 +146,7 @@ section.main {
   }
 }
 section.header {
-  background-color: #f7f7f7;
+ 
 }
 section.header .container {
   -webkit-align-items: center;
@@ -273,7 +273,7 @@ section.header nav ul li:hover {
   }
 }
 section.icons {
-  background-color: #f7f7f7;
+ 
 }
 section.icons .container {
   -webkit-align-items: center;
@@ -337,7 +337,7 @@ section.main .container {
 }
 section.main .content {
   color: #111;
-  font-size: 16px;
+  font-size: 18px;
 }
 section.main .content .title-container {
   display: -webkit-flex;
@@ -389,7 +389,7 @@ section.main .content .front-matter .page-heading {
   margin-bottom: 0;
 }
 section.main .content .front-matter .meta {
-  font-size: 14px;
+  font-size: 18px;
   color: #666;
   display: -webkit-flex;
   display: -moz-flex;
@@ -487,7 +487,7 @@ section.main .container .content .post-item {
   list-style: disc inside;
 }
 section.main .container .content .post-item .meta {
-  font-size: 14px;
+  font-size: 18px;
   color: #666;
   display: none;
   min-width: 100px;
