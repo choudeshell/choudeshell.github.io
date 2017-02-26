@@ -7,7 +7,7 @@ section.main .content .page-heading {
 }
 
 a {
-    color: #21a256;
+    color: #F05927;
 }
 
 a:hover {
@@ -16,7 +16,7 @@ a:hover {
 
 .page-heading {
     font-size: 28px;
-    font-weight: 100;
+    font-weight: 400;
 }
 
 .post-item {
@@ -24,18 +24,19 @@ a:hover {
 }
 
 .page-heading a {
-    color: #21a256;
+    color: #F05927;
     font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
+    font-weight: 400;
 }
 
 .page-heading a:hover {
-    color: #1c8c4a;
+    color: #F05927;
     font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 section.main .content .page-heading {
     font-size: 28px;
-    font-weight: 200;
+     font-weight: 400;
     font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
@@ -52,7 +53,7 @@ section.main .container .content .post-item {
 .moretag {
     margin-top: 10px;
     display: inline-block;
-    background: #21a256;
+    background: #F05927;
     padding: 7px;
     font-size: 14px;
     color: #fff;
@@ -62,7 +63,7 @@ section.main .container .content .post-item {
 .moretag:hover {
     margin-top: 10px;
     display: inline-block;
-    background: #1c8c4a;
+    background: #e25323;
     padding: 7px;
     font-size: 14px;
     color: #fff;
@@ -75,6 +76,6 @@ section.main .container .content .post-item {
 
 @media (min-width: 600px) {
     section.header nav ul li:hover {
-        color: #21a256;
+        color: #F05927;
     }
 }

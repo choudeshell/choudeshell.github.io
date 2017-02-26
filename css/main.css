@@ -306,9 +306,16 @@ section.icons .content a:last-child {
 section.icons .content a:hover {
   opacity: 0.8;
 }
-section.icons .content a .icon {
+a .icon {
   width: 16px;
   height: 16px;
+  opacity: 0.6;
+}
+a .icon:hover {
+  width: 16px;
+  height: 16px;
+  opacity: 1;
+  color:#e25323!important;
 }
 @media (min-width: 600px) {
   section.icons {
