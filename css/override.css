@@ -7,11 +7,16 @@ section.main .content .page-heading {
 }
 
 a {
-    color: #F05927;
+    color: #6d05a0;
+}
+
+.markdown a
+{
+    border-bottom: dotted 1px;
 }
 
 a:hover {
-    color: #1c8c4a;
+    color: #510377;
 }
 
 .page-heading {
@@ -24,13 +29,13 @@ a:hover {
 }
 
 .page-heading a {
-    color: #F05927;
+    color: #6d05a0;
     font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
     font-weight: 400;
 }
 
 .page-heading a:hover {
-    color: #F05927;
+    color: #6d05a0;
     font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
@@ -53,7 +58,7 @@ section.main .container .content .post-item {
 .moretag {
     margin-top: 10px;
     display: inline-block;
-    background: #F05927;
+    background: #6d05a0;
     padding: 7px;
     font-size: 14px;
     color: #fff;
@@ -63,7 +68,7 @@ section.main .container .content .post-item {
 .moretag:hover {
     margin-top: 10px;
     display: inline-block;
-    background: #e25323;
+    background: #510377;
     padding: 7px;
     font-size: 14px;
     color: #fff;
@@ -76,6 +81,6 @@ section.main .container .content .post-item {
 
 @media (min-width: 600px) {
     section.header nav ul li:hover {
-        color: #F05927;
+        color: #6d05a0;
     }
 }
