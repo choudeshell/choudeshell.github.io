@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Azure &middot; Bit Herding</title>
+        <title>Azure Stack Technical Preview 1 - Thoughts &middot; Bit Herding</title>
         <meta name="author">
         <meta name="description" content="Hearding Bits">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,13 +35,12 @@
         
         
 
+
 <div class="container clearfix">
     <main role="main" class="content">
-        <a class="btn home" href="https://www.choudeshell.com/" title="Back to home">&laquo; Back to home</a>
-        
-        
-            <article class="post">
-    
+        <article class="post">
+            <a class="btn home" href="https://www.choudeshell.com/" title="Back to home">&laquo; Back to home</a>
+            
 <h1><a href="https://www.choudeshell.com/blog/azure-stack-preview/" title="Azure Stack Technical Preview 1 - Thoughts">Azure Stack Technical Preview 1 - Thoughts</a></h1>
 
 <footer class="post-info">Posted on <span class="post-meta"><time datetime="2016.01.28">2016.01.28</time>
@@ -57,23 +56,34 @@
 </span>
 </footer>
 
-    <p>On Tuesday, Microsoft announced that the first Technical Preview of Azure Stack will be available Friday, January 29. Like many others, I&rsquo;ve already provisioned a machine. The thought of true private-public hybrid cloud excites me. While information is currently limited, here are my thoughts before the release.
- Working for a small business, costs are always a concern. While the cloud enables us to provision outside of our data center and respond to change quickly, fluid costs limit the full potential of us using the cloud.&hellip;</p>
-    <a class="btn" href="https://www.choudeshell.com/blog/azure-stack-preview/" title="Azure Stack Technical Preview 1 - Thoughts">Read more &raquo;</a>
-</article>
+            <p>On Tuesday, <a href="https://azure.microsoft.com/en-us/blog/announcing-the-first-technical-preview-of-microsoft-azure-stack/">Microsoft</a> announced that the first Technical Preview of Azure Stack will be available Friday, January 29. Like many others, I&rsquo;ve already provisioned a machine. The thought of true private-public hybrid cloud excites me. While information is currently limited, here are my thoughts before the release.</p>
 
+<ul>
+<li>Working for a small business, costs are always a concern. While the cloud enables us to provision outside of our data center and respond to change quickly, fluid costs limit the full potential of us using the cloud. Hopefully, Russinovich and Snover cover licensing early, allowing small business to budget for Azure Stack and bring more of a fixed cost to the (hybrid) cloud.</li>
+<li>DocumentDB should be delivered early in the Technical Preview cadence. DocumentDB is one of few Azure services that doesn&rsquo;t have a great on-premise alternative. While this may be due to the .NET-isms native to DocumentDB, releasing an early Azure Stack version, Microsoft will finally erase one of DocumentDB&rsquo;s few downsides.</li>
+<li>Azure Active Directory B2C. With Microsoft pounding nail after nail into AD ACS&rsquo; coffin and officially deprecating it, an on-premise alternative is needed. It is a given that Azure Stack TP1 will include at least some AD integration, due to the portal relying on AD ACLs.</li>
+<li>Early Azure fail-over/scale-out. Azure Resource Manager templates are the currently touted orchestration tool for Azure. I hope Azure Stack can automatically produce these templates and deploy a copy of the resource group to Azure in case of a local failure or for hybrid cloud scale-out.<br /></li>
+</ul>
+
+            <ul class="share-buttons">
+    <li>Share this article:</li>
+    <li>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.choudeshell.com%2fblog%2fazure-stack-preview%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+    </li>
+    <li>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Azure%20Stack%20Technical%20Preview%201%20-%20Thoughts&amp;url=https%3a%2f%2fwww.choudeshell.com%2fblog%2fazure-stack-preview%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+    </li>
+    <li>
+        <a class="icon-gplus" href="https://plus.google.com/share?url=https%3a%2f%2fwww.choudeshell.com%2fblog%2fazure-stack-preview%2f" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google&#43;"></a>
+    </li>
+    <li>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fwww.choudeshell.com%2fblog%2fazure-stack-preview%2f&title=Azure%20Stack%20Technical%20Preview%201%20-%20Thoughts" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+    </li>
+</ul>
+
+        </article>
         
-        <div class="pagination">
-<nav>
-
-	<p class="counter">Page 1 of 1</p>
-
-
-</nav>
-</div>
-
     </main>
-
     <aside class="author">
   <img class="profile-image" src="https://www.choudeshell.com/images/me.png" alt="Chris Houdeshell" />
   <p class="name">by 
@@ -115,6 +125,7 @@
 </aside>
 
 </div>
+
 <footer class="main-footer">
   <div class="container clearfix">
         <a class="icon-rss" href="https://www.choudeshell.com/post/index.xml" title="RSS"></a>
