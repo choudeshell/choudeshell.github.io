@@ -465,7 +465,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   text-decoration: none;
-  color: #c16c11;
+  color: #e50a0a;
   transition: all 0.3s ease; }
   a:hover {
     color: #222222; }
@@ -482,7 +482,8 @@ hr {
 
 .post ul li {
   line-height: 28px;
-  font-size: 15px; }
+  padding-bottom: 20px;
+ }
 
 .container {
   margin: 0 auto;
@@ -570,7 +571,7 @@ hr {
 .post {
   margin-bottom: 60px;
   padding-bottom: 60px;
-  border-bottom: 1px solid #ececec; }
+  }
 
 .post img {
   max-width: 100%;
@@ -580,7 +581,7 @@ hr {
   color: #a2a2a2;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 40px;
   line-height: 30px; }
 
@@ -708,7 +709,7 @@ hr {
   {
     list-style: none;
     display: inline;
-    font-size:22px;
+    font-size:18px;
   }
 
   .author ul.links li {
@@ -731,7 +732,6 @@ hr {
   font-size: 20px; }
 
 .main-footer {
-  background-color: #f3f3f3;
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
