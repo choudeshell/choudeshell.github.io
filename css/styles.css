@@ -25,7 +25,7 @@ html {
 
 body {
   margin: 0;
-  font-size:18px;
+  font-size:16px;
 }
 
 
@@ -682,8 +682,8 @@ hr {
 }
 
 .header-bar .title {
-  padding-left: 10%;
-  font-size: 21px;
+  padding-left: 8%;
+  font-size: 16px;
   color: #fff;
   line-height: 50px;
   font-weight: 300;
@@ -710,8 +710,7 @@ hr {
 .header-bar .nav ul li a
 {
   color:#fff;
-  font-size: 18px;
-  font-weight:800;
+  font-size: 16px;
 }
 
 .header-bar .title span
@@ -782,7 +781,7 @@ hr {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
-  width: 150px;
+  width: 125px;
 }
 
 .post h2 {
@@ -954,7 +953,7 @@ hr {
 .author p {
   margin: 0;
   padding: 0;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .author p.name {
@@ -969,7 +968,7 @@ hr {
 .links {
   list-style: none;
   display: inline;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .author ul.links li {
