@@ -674,9 +674,9 @@ hr {
 .header-bar {
   display: block;
   width: 100%;
-  background: #e50a0a;
-  height: 50px;
-  margin: 0 0 50px 0;
+  background: #444d58;
+  min-height: 50px;
+  margin: 0 0 30px 0;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
 }
@@ -686,7 +686,7 @@ hr {
   font-size: 16px;
   color: #fff;
   line-height: 50px;
-  font-weight: 300;
+  font-weight: 400;
   display: inline;
 }
 
@@ -710,7 +710,9 @@ hr {
 .header-bar .nav ul li a
 {
   color:#fff;
+  line-height: 50px;
   font-size: 16px;
+  font-weight: 400;
 }
 
 .header-bar .title span
@@ -731,8 +733,8 @@ hr {
 
 .content {
   width: 65%;
-  margin-right: 10%;
-  float: right;
+  margin-left: 8%;
+  display:block;
 }
 
 .site-header {
@@ -781,7 +783,7 @@ hr {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
-  width: 125px;
+  width: 150px;
 }
 
 .post h2 {
@@ -813,8 +815,9 @@ hr {
 }
 
 .post img {
-  max-width: 100%;
+  max-width: 500px;
   height: auto;
+  width: 100%;
 }
 
 .post-info {
@@ -953,7 +956,7 @@ hr {
 .author p {
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .author p.name {
@@ -968,7 +971,7 @@ hr {
 .links {
   list-style: none;
   display: inline;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .author ul.links li {
@@ -1037,12 +1040,18 @@ body.post-template .site-header h2 .logo {
   .site-header h2 {
     font-size: 56px;
   }
+
 }
 
 @media only screen and (max-width: 719px) {
   .container {
     width: 90%;
     padding-top: 25px;
+  }
+  .header-bar .title
+  {    
+    padding-left: 40px;
+    display:block;
   }
   .author,
   .content {
