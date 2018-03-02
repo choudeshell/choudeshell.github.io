@@ -8,20 +8,8 @@
   </url>
   
   <url>
-    <loc>https://www.choudeshell.com/blog/azure-stack-preview/</loc>
-    <lastmod>2016-01-28T22:13:47-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.choudeshell.com/tags/azure/</loc>
-    <lastmod>2016-01-28T22:13:47-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.choudeshell.com/tags/azure-stack/</loc>
-    <lastmod>2016-01-28T22:13:47-05:00</lastmod>
-    <priority>0</priority>
+    <loc>https://www.choudeshell.com/blog/keycloak-custom-claims/</loc>
+    <lastmod>2017-02-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -32,7 +20,7 @@
   
   <url>
     <loc>https://www.choudeshell.com/blog/</loc>
-    <lastmod>2016-01-28T22:13:47-05:00</lastmod>
+    <lastmod>2017-02-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -42,8 +30,14 @@
   </url>
   
   <url>
+    <loc>https://www.choudeshell.com/tags/keycloak/</loc>
+    <lastmod>2017-02-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.choudeshell.com/tags/</loc>
-    <lastmod>2016-01-28T22:13:47-05:00</lastmod>
+    <lastmod>2017-02-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

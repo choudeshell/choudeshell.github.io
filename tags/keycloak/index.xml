@@ -1,27 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bit Herding</title>
-    <link>https://www.choudeshell.com/</link>
-    <description>Recent content on Bit Herding</description>
+    <title>Keycloak on Bit Herding</title>
+    <link>https://www.choudeshell.com/tags/keycloak/</link>
+    <description>Recent content in Keycloak on Bit Herding</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Chris Houdeshell</copyright>
-    <lastBuildDate>Fri, 24 Nov 2017 15:20:05 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 26 Feb 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.choudeshell.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.choudeshell.com/tags/keycloak/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>About</title>
-      <link>https://www.choudeshell.com/about/</link>
-      <pubDate>Fri, 24 Nov 2017 15:20:05 -0400</pubDate>
-      
-      <guid>https://www.choudeshell.com/about/</guid>
-      <description>Hello. I&amp;rsquo;m Chris Houdeshell. I&amp;rsquo;m a bit herder, a pointer wrecker, and HTTP is my best friend.
-I spend my days creating bits that make the cloud fluffy. I love all modern technology but a special place is reserved in my heart for IoT, embedded devices, distributed systems and anything that has a content-type.
-During the day, I conjure up software as an Assistant Vice President at EnergyCAP. Or I just have meetings about conjuring up software.</description>
-    </item>
     
     <item>
       <title>&#39;Namespaced&#39; claims in Keycloak</title>

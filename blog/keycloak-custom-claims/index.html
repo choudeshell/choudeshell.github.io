@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>About &middot; Bit Herding</title>
+        <title>&#39;Namespaced&#39; claims in Keycloak &middot; Bit Herding</title>
         <meta name="author">
         <meta name="description" content="Hearding Bits">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -76,37 +76,88 @@
     <main role="main" class="content">
         <article class="post">            
             
-<h1><a href="https://www.choudeshell.com/about/" title="About">About</a></h1>
+<h1><a href="https://www.choudeshell.com/blog/keycloak-custom-claims/" title="&#39;Namespaced&#39; claims in Keycloak">&#39;Namespaced&#39; claims in Keycloak</a></h1>
 
 
-<footer class="post-info">Posted on <span class="post-meta"><time datetime="2017.11.24">2017.11.24</time>
+<footer class="post-info">Posted on <span class="post-meta"><time datetime="2017.02.26">2017.02.26</time>
+    
+
+    &middot; Tagged in
+        
+        <a href="https://www.choudeshell.com/tags/keycloak">keycloak</a>
+        
     
 
 </span>
 
 </footer>
+<a href="#" class="image featured"><img src="https://www.choudeshell.com/images/keycloak.png"></a>
+            <blockquote>
+<p>Keycloak is an Open Source Identity and Access Management
+application that rivals top IAM SaaS products, including
+<a href="https://www.auth0.com">Auth0</a>.</p>
+</blockquote>
 
-            <p>Hello. I&rsquo;m Chris Houdeshell. I&rsquo;m a bit herder, a pointer wrecker, and HTTP is my best friend.</p>
+<p>Something that took me an inordinate amount of time was trying
+to add custom &lsquo;namespaced&rsquo; claims to the Keycloak&rsquo;s <code>access_token</code>.</p>
 
-<p>I spend my days creating bits that make the cloud fluffy. I love all modern technology but a special place is reserved in my heart for IoT, embedded devices, distributed systems and anything that has a content-type.</p>
+<p>Previously, I&rsquo;ve used Auth0 as an IAM; adding a custom claim
+with <a href="https://www.auth0.com">Auth0</a> only worked with &lsquo;namespaced&rsquo; claims &mdash; claims
+that was prefixed with a URL. In Auth0&rsquo;s case, <code>https://choudeshell.com/role_type</code> was considered &lsquo;namespaced&rsquo; claim.</p>
 
-<p>During the day, I conjure up software as an Assistant Vice President at <a href="http://www.energycap.com">EnergyCAP</a>. Or I just have meetings about conjuring up software.</p>
+<p>Translating this functionality into Keycloak was actually
+much harder than expected. Out of the box, Keycloak allows many different types of mappers for claims. Generally, all of them behave same. If a given claim name has a <code>.</code> in it, Keycloak will generate a nested object in
+the resulting <code>access_token</code>.</p>
 
-<p>I also drink a bit too much coffee ☕ while rambling on about technology. If you are willing to have a conversation &ndash; I am ready to buy you a cup. Just email me at <a href="mailto:choudeshell@gmail.com">choudeshell@gmail.com</a></p>
+<p><code>https://choudeshell.com/role_type</code> came out to be</p>
+
+<pre><code class="language-javascript">{
+    &quot;https://choudeshell&quot;:
+        {
+            &quot;com/role_type&quot;:&quot;value&quot;
+        }
+}
+`````````
+
+What I wanted the resulting ```access_token``` to contain was:
+
+```javascript
+{
+    &quot;https://choudeshell.com/role_type&quot;:&quot;value&quot;
+}
+</code></pre>
+
+<p>The solution? <strong>Use a Script Mapper</strong>. A Script Mapper allows us to use plain-old Javascript. With the provided objects, we can add any claim we want and it isn&rsquo;t effected by the nesting logic.</p>
+
+<pre><code class="language-javascript">/**
+ * Available variables: 
+ * user - the current user
+ * realm - the current realm
+ * token - the current token
+ * userSession - the current userSession
+ * keycloakSession - the current userSession
+ */
+
+token.setOtherClaims(&quot;https://choudeshell.com/role_type&quot;,&quot;value&quot;);
+</code></pre>
+
+<blockquote>
+<p>Something to keep in mind. The Javascript Script Mapper&rsquo;s script is executed via Java &amp; Nashorn, which means the injected variables are bound both ways. You can even update the user&rsquo;s email address by calling the <code>user.setEmail('x')</code> function!</p>
+</blockquote>
 
             <ul class="share-buttons">
     <li>Share this article:</li>
     <li>
-        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.choudeshell.com%2fabout%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.choudeshell.com%2fblog%2fkeycloak-custom-claims%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook"></a>
     </li>
     <li>
-        <a class="icon-twitter" href="https://twitter.com/share?text=About&amp;url=https%3a%2f%2fwww.choudeshell.com%2fabout%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
+        <a class="icon-twitter" href="https://twitter.com/share?text=%27Namespaced%27%20claims%20in%20Keycloak&amp;url=https%3a%2f%2fwww.choudeshell.com%2fblog%2fkeycloak-custom-claims%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Tweet this article"></a>
     </li>
     <li>
-        <a class="icon-gplus" href="https://plus.google.com/share?url=https%3a%2f%2fwww.choudeshell.com%2fabout%2f" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google&#43;"></a>
+        <a class="icon-gplus" href="https://plus.google.com/share?url=https%3a%2f%2fwww.choudeshell.com%2fblog%2fkeycloak-custom-claims%2f" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google&#43;"></a>
     </li>
     <li>
-        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fwww.choudeshell.com%2fabout%2f&title=About" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fwww.choudeshell.com%2fblog%2fkeycloak-custom-claims%2f&title=%27Namespaced%27%20claims%20in%20Keycloak" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"></a>
     </li>
 </ul>
 
