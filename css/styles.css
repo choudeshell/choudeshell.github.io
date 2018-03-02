@@ -690,7 +690,7 @@ hr {
   background: #0a1822;
   min-height: 50px;
   margin: 0 0 30px 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Muli", sans-serif;
   font-weight: 300;
 }
 
@@ -818,7 +818,7 @@ hr {
 .post-template h4,
 .post-template h5,
 .post-template h6 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Muli", sans-serif;
   font-weight: 700;
 }
 
@@ -835,7 +835,7 @@ hr {
 
 .post-info {
   color: #a2a2a2;
-  font-family: "Roboto", sans-serif;
+  font-family: "Muli", sans-serif;
   font-weight: 300;
   font-size: 16px;
   margin-bottom: 40px;
@@ -849,7 +849,7 @@ hr {
 
 .share-buttons li {
   display: inline;
-  font-family: "Roboto", sans-serif;
+  font-family: "Muli", sans-serif;
   font-weight: 300;
   font-size: 13px;
   color: #979797;
@@ -873,7 +873,7 @@ hr {
 }
 
 .tag-title {
-  font-family: "Roboto", sans-serif;
+  font-family: "Muli", sans-serif;
   font-weight: 300;
   border-bottom: 1px solid #ececec;
   margin-bottom: 40px;
@@ -907,7 +907,7 @@ hr {
   -moz-border-radius: 3px;
   border-radius: 3px;
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "Muli", sans-serif;
   font-weight: 300;
   line-height: 35px;
   font-size: 13px;
@@ -956,13 +956,13 @@ hr {
   text-align: center;
   line-height: 35px;
   font-size: 13px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Muli", sans-serif;
   font-weight: 300;
   color: #979797;
 }
 
 .author {
-  font-family: "Roboto", sans-serif;
+  font-family: "Muli", sans-serif;
   font-weight: 300;
 }
 
@@ -1010,7 +1010,7 @@ hr {
 
 .main-footer {
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "Muli", sans-serif;
   font-weight: 300;
   color: #a2a2a2;
 }
