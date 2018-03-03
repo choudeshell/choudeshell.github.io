@@ -3,14 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Bit Herding &middot; Bit Herding</title>
+        <title>Bit Herding | Chris Houdeshell &middot; Bit Herding | Chris Houdeshell</title>
         <meta name="author">
         <meta name="description" content="Hearding Bits">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="generator" content="Hugo 0.37" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.11.0/prism.min.js"></script>
-        <link href="https://www.choudeshell.com/post/index.xml" rel="alternate" type="application/rss+xml" title="Bit Herding" />
-        <link href="https://www.choudeshell.com/post/index.xml" rel="feed" type="application/rss+xml" title="Bit Herding" />
+        <link href="https://www.choudeshell.com/post/index.xml" rel="alternate" type="application/rss+xml" title="Bit Herding | Chris Houdeshell" />
+        <link href="https://www.choudeshell.com/post/index.xml" rel="feed" type="application/rss+xml" title="Bit Herding | Chris Houdeshell" />
         <link href='//fonts.googleapis.com/css?family=Muli:400,300,700' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
         <link rel="stylesheet" href="https://www.choudeshell.com/css/styles.css">
@@ -83,7 +83,7 @@
 <h1><a href="https://www.choudeshell.com/blog/keycloak-custom-claims/" title="&#39;Namespaced&#39; claims in Keycloak">&#39;Namespaced&#39; claims in Keycloak</a></h1>
 
 
-<footer class="post-info">Posted on <span class="post-meta"><time datetime="2017.02.26">2017.02.26</time>
+<footer class="post-info">Updated on <span class="post-meta"><time datetime="2017.03.03">2017.03.03</time>
     
 
     &middot; Tagged in
@@ -107,13 +107,13 @@ to add custom &lsquo;namespaced&rsquo; claims to the Keycloak&rsquo;s <code>acce
 
 <p>Previously, I&rsquo;ve used Auth0 as an IAM; adding a custom claim
 with <a href="https://www.auth0.com">Auth0</a> only worked with &lsquo;namespaced&rsquo; claims &mdash; claims
-that was prefixed with a URL. In Auth0&rsquo;s case, <code>https://choudeshell.com/role_type</code> was considered &lsquo;namespaced&rsquo; claim.</p>
+that were prefixed with a URL. In Auth0&rsquo;s case, <code>https://choudeshell.com/role_type</code> was considered &lsquo;namespaced&rsquo; claim.</p>
 
 <p>Translating this functionality into Keycloak was actually
-much harder than expected. Out of the box, Keycloak allows many different types of mappers for claims. Generally, all of them behave same. If a given claim name has a <code>.</code> in it, Keycloak will generate a nested object in
+much harder than expected. Out of the box, Keycloak allows for many different types of claim mappers &ndash; ways to generate and assign claims to the <code>access_token</code> or <code>id_token</code>. Generally, all of them behave the same when it comes to defining the claim name. If a given claim name has a <code>.</code> in it, Keycloak will generate a nested object in
 the resulting <code>access_token</code>.</p>
 
-<p><code>https://choudeshell.com/role_type</code> came out to be</p>
+<p>For example, a claim with the name <code>https://choudeshell.com/role_type</code> would result in:</p>
 
 <pre><code class="language-javascript">{
     &quot;https://choudeshell&quot;:
@@ -130,7 +130,7 @@ the resulting <code>access_token</code>.</p>
 }
 </code></pre>
 
-<p>The solution? <strong>Use a Script Mapper</strong>. A Script Mapper allows us to use plain-old Javascript. With the provided objects, we can add any claim we want and it isn&rsquo;t effected by the nesting logic.</p>
+<p>The solution? <strong>Use a Script Mapper</strong>. A Script Mapper allows us to use plain-old Javascript. With the provided objects, we can add any claim, with any name we want, and it isn&rsquo;t effected by the nesting logic.</p>
 
 <pre><code class="language-javascript">/**
  * Available variables: 
