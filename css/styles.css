@@ -25,7 +25,7 @@ html {
 
 body {
   margin: 0;
-  font-size:16px;
+  font-size:17px;
 }
 
 
@@ -665,10 +665,12 @@ h6 a:hover {
 blockquote {
   color: #4c4c4c;
   background-color: rgba(0,0,0,.05);
-  border-left: 5px solid #0594cb;
+  border-left: 5px solid #66B34E;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
+  margin-left:0;
+  marign-right:0;
 }
 
 blockquote p {
@@ -686,23 +688,34 @@ hr {
   padding-bottom: 20px;
 }
 
-.header-bar {
+.header-wrapper {
   display: block;
   width: 100%;
-  background: #689f38;
-  min-height: 50px;
+  kerning: 4px;
+  background-color: #2a373d;
+  min-height: 65px;
   margin: 0 0 30px 0;
   font-family: "Muli", sans-serif;
   font-weight: 300;
 }
 
+.header-bar
+{
+  margin: 0 auto;
+  max-width: 1000px;
+  line-height: 65px;
+  width:100%;
+}
+
 .header-bar .title {
-  padding-left: 8%;
   font-size: 16px;
-  color: #fff;
   line-height: 50px;
   font-weight: 400;
   display: inline;
+  color: #ffffff;
+  background: #66B34E;
+  letter-spacing: 2px;
+  padding: 10px;
 }
 
 .header-bar .nav
@@ -737,7 +750,7 @@ hr {
 
 .container {
   margin: 0 auto;
-  width: 1200px;
+  max-width: 1000px;
   padding: 0 0 0 0;
 }
 
@@ -747,8 +760,6 @@ hr {
 }
 
 .content {
-  width: 65%;
-  margin-left: 8%;
   display:block;
 }
 
@@ -1065,7 +1076,6 @@ body.post-template .site-header h2 .logo {
   }
   .header-bar .title
   {    
-    padding-left: 40px;
     display:block;
   }
   .author,
