@@ -25,7 +25,7 @@ html {
 
 body {
   margin: 0;
-  font-size:16px;
+  font-size:17px;
 }
 
 
@@ -617,6 +617,7 @@ th {
 
 body {
   color: #222222;
+  background:#f3f3f3;
   font-family: "Muli", serif;
   font-weight: 400;
   transition: all 0.3s ease;
@@ -665,10 +666,12 @@ h6 a:hover {
 blockquote {
   color: #4c4c4c;
   background-color: rgba(0,0,0,.05);
-  border-left: 5px solid #0594cb;
+  border-left: 5px solid #66B34E;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
+  margin-left:0;
+  marign-right:0;
 }
 
 blockquote p {
@@ -686,23 +689,35 @@ hr {
   padding-bottom: 20px;
 }
 
-.header-bar {
+.header-wrapper {
   display: block;
   width: 100%;
-  background: #689f38;
-  min-height: 50px;
+  kerning: 4px;
+  background: #fff;
+  border-bottom: 1px solid #e4e4e4;
+  min-height: 65px;
   margin: 0 0 30px 0;
   font-family: "Muli", sans-serif;
   font-weight: 300;
 }
 
+.header-bar
+{
+  margin: 0 auto;
+  max-width: 1000px;
+  line-height: 65px;
+  width:100%;
+}
+
 .header-bar .title {
-  padding-left: 8%;
   font-size: 16px;
-  color: #fff;
   line-height: 50px;
   font-weight: 400;
   display: inline;
+  color: #ffffff;
+  background: #66B34E;
+  letter-spacing: 2px;
+  padding: 10px;
 }
 
 .header-bar .nav
@@ -724,7 +739,7 @@ hr {
 
 .header-bar .nav ul li a
 {
-  color:#fff;
+  color:#434343;
   line-height: 50px;
   font-size: 16px;
   font-weight: 400;
@@ -737,7 +752,7 @@ hr {
 
 .container {
   margin: 0 auto;
-  width: 1200px;
+  max-width: 1000px;
   padding: 0 0 0 0;
 }
 
@@ -747,8 +762,6 @@ hr {
 }
 
 .content {
-  width: 65%;
-  margin-left: 8%;
   display:block;
 }
 
@@ -909,14 +922,26 @@ hr {
   -moz-border-radius: 3px;
   border-radius: 3px;
   text-align: center;
-  font-family: "Muli", sans-serif;
-  font-weight: 300;
+  font-family: muli,sans-serif;
+  font-weight: 600;
   line-height: 35px;
   font-size: 13px;
   color: #000;
   background-color: #2a373d70;
   border-color: #2a373d;
-  color: #FFF;
+  color: #fff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all .2s ease-in-out;
+  background: #ececec;
+  color: #676767;
+  border: 1px solid #ececec;
+  padding: 0 1.6rem;
+  font-size: .9rem;
+  height: 3rem;
+  line-height: 3rem;
 }
 
 .btn:hover {
@@ -1065,7 +1090,6 @@ body.post-template .site-header h2 .logo {
   }
   .header-bar .title
   {    
-    padding-left: 40px;
     display:block;
   }
   .author,

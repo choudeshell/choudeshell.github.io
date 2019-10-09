@@ -34,6 +34,7 @@
         </style>
     </head>
     <body>
+        <div class="header-wrapper">
             <div class="header-bar">
                     <div class="title">Chris<span>Houdeshell</span></div>
                     <div class="nav">
@@ -66,8 +67,8 @@
 
                         </ul>
                     </div>
-
-                </div>
+            </div>
+        </div>
         
         
 
@@ -84,7 +85,7 @@
 <h1><a href="https://www.choudeshell.com/blog/keycloak-custom-claims/" title="&#39;Namespaced&#39; claims in Keycloak">&#39;Namespaced&#39; claims in Keycloak</a></h1>
 
 
-<footer class="post-info">Updated on <span class="post-meta"><time datetime="2017.03.03">2017.03.03</time>
+<footer class="post-info">Updated on <span class="post-meta"><time datetime="2018.06.15">2018.06.15</time>
     
 
     &middot; Tagged in
@@ -96,11 +97,14 @@
 </span>
 
 </footer>
-<a href="#" class="image featured"><img src="https://www.choudeshell.com/images/keycloak.png"></a>
+
             <blockquote>
-<p>Keycloak is an Open Source Identity and Access Management
-application that rivals top IAM SaaS products, including
-<a href="https://www.auth0.com">Auth0</a>.</p>
+<p><a href="https://www.keycloak.org/docs/latest/release_notes/index.html#keycloak-4-2-0-final">Keycloak 4.2.0</a> <br/><br/>
+In previous versions of Keycloak, it was not possible to create claims in the token using a claim name containing a period as a seperator.
+Since 4.2.0, it is possible to escape the dot character in the configuration, so a claim name with the dot character can be used.</p>
+
+<pre><code class="language-js">&quot;choudeshell\.com/role_type&quot;
+</code></pre>
 </blockquote>
 
 <p>Something that took me an inordinate amount of time was trying

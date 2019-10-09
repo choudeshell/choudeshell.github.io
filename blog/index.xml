@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Chris Houdeshell</copyright>
-    <lastBuildDate>Fri, 03 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 Jun 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.choudeshell.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,12 +15,11 @@
     <item>
       <title>&#39;Namespaced&#39; claims in Keycloak</title>
       <link>https://www.choudeshell.com/blog/keycloak-custom-claims/</link>
-      <pubDate>Fri, 03 Mar 2017 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 15 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.choudeshell.com/blog/keycloak-custom-claims/</guid>
-      <description>Keycloak is an Open Source Identity and Access Management application that rivals top IAM SaaS products, including Auth0.
- Something that took me an inordinate amount of time was trying to add custom &amp;lsquo;namespaced&amp;rsquo; claims to the Keycloak&amp;rsquo;s access_token.
-Previously, I&amp;rsquo;ve used Auth0 as an IAM; adding a custom claim with Auth0 only worked with &amp;lsquo;namespaced&amp;rsquo; claims &amp;mdash; claims that were prefixed with a URL. In Auth0&amp;rsquo;s case, https://choudeshell.com/role_type was considered &amp;lsquo;namespaced&amp;rsquo; claim.</description>
+      <description>Keycloak 4.2.0  In previous versions of Keycloak, it was not possible to create claims in the token using a claim name containing a period as a seperator. Since 4.2.0, it is possible to escape the dot character in the configuration, so a claim name with the dot character can be used.
+&amp;quot;choudeshell\.com/role_type&amp;quot;   Something that took me an inordinate amount of time was trying to add custom &amp;lsquo;namespaced&amp;rsquo; claims to the Keycloak&amp;rsquo;s access_token.</description>
     </item>
     
   </channel>
