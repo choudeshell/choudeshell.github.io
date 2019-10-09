@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bits | Chris Houdeshell</title>
+    <title>Bit Herding | Chris Houdeshell</title>
     <link>https://www.choudeshell.com/</link>
-    <description>Recent content on Bits | Chris Houdeshell</description>
+    <description>Recent content on Bit Herding | Chris Houdeshell</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Chris Houdeshell</copyright>
@@ -20,7 +20,7 @@
       <guid>https://www.choudeshell.com/about/</guid>
       <description>Hello. I&amp;rsquo;m Chris Houdeshell. I&amp;rsquo;m a bit herder, a pointer wrecker, and HTTP is my best friend.
 I spend my days creating bits that make the cloud fluffy. I love all modern technology but a special place is reserved in my heart for IoT, embedded devices, distributed systems and anything that has a content-type.
-During the day, I conjure up software as the Chief Technology Officer at EnergyCAP. Or I just have meetings about conjuring up software.</description>
+During the day, I conjure up software as an Assistant Vice President at EnergyCAP. Or I just have meetings about conjuring up software.</description>
     </item>
     
     <item>
