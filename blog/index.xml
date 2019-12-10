@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Bit Herding | Chris Houdeshell</title>
@@ -18,8 +18,9 @@
       <pubDate>Fri, 15 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://www.choudeshell.com/blog/keycloak-custom-claims/</guid>
-      <description>Keycloak 4.2.0  In previous versions of Keycloak, it was not possible to create claims in the token using a claim name containing a period as a seperator. Since 4.2.0, it is possible to escape the dot character in the configuration, so a claim name with the dot character can be used.
-&amp;quot;choudeshell\.com/role_type&amp;quot;   Something that took me an inordinate amount of time was trying to add custom &amp;lsquo;namespaced&amp;rsquo; claims to the Keycloak&amp;rsquo;s access_token.</description>
+      <description>Keycloak is an Open Source Identity and Access Management application that rivals top IAM SaaS products, including Auth0.
+ Something that took me an inordinate amount of time was trying to add custom &amp;lsquo;namespaced&amp;rsquo; claims to the Keycloak&#39;s access_token.
+Previously, I&#39;ve used Auth0 as an IAM; adding a custom claim with Auth0 only worked with &amp;lsquo;namespaced&amp;rsquo; claims &amp;mdash; claims that were prefixed with a URL. In Auth0&#39;s case, https://choudeshell.com/role_type was considered &amp;lsquo;namespaced&amp;rsquo; claim.</description>
     </item>
     
   </channel>
