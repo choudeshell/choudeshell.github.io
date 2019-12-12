@@ -690,6 +690,7 @@ hr {
 }
 
 .header-wrapper {
+  text-transform: uppercase;
   display: block;
   width: 100%;
   kerning: 4px;
@@ -849,6 +850,7 @@ hr {
 
 .post-info {
   color: #a2a2a2;
+  text-transform: uppercase;
   font-family: "Muli", sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -858,6 +860,7 @@ hr {
 
 .share-buttons {
   list-style: none;
+  text-transform: uppercase;
   padding: 0;
 }
 
