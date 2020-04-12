@@ -263,7 +263,7 @@ kbd,
 pre,
 samp {
   font-size: 17px;
-  background-color: rgb(52, 58, 64);
+  background: #1f2532;
   color: #ffffff;
   padding: 5px;
 }
@@ -616,7 +616,7 @@ th {
 
 body {
   color: #222222;
-  background:#fff;
+  background: #f4f4f4;
   font-family: "Muli", serif;
   font-weight: 400;
   transition: all 0.3s ease;
@@ -664,8 +664,7 @@ h6 a:hover {
 
 blockquote {
   color: #4c4c4c;
-  background-color: #f3f3f3;
-  border-left: 5px solid #632859;
+  border-left: 5px solid #1f2532;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
@@ -694,9 +693,9 @@ hr {
   display: block;
   width: 100%;
   kerning: 4px;
-  background: #fff;
-  min-height: 65px;
-  margin: 30px 0 30px 0;
+  background: #1f2532;
+  min-height: 65px;  
+  padding: 30px 0 30px 0;
   font-family: "Muli", sans-serif;
   font-weight: 300;
 }
@@ -715,7 +714,7 @@ hr {
   font-weight: 400;
   display: inline;
   color: #ffffff;
-  background-color: #6c6783;
+  background: #1f2532;
   letter-spacing: 2px;
   padding: 10px;
 }
@@ -739,7 +738,7 @@ hr {
 
 .header-bar .nav ul li a
 {
-  color:#434343;
+  color: #dedede;
   line-height: 50px;
   font-size: 16px;
   font-weight: 400;
@@ -762,6 +761,7 @@ hr {
 }
 
 .content {
+  padding-top: 10px;
   display:block;
 }
 
