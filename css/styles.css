@@ -25,7 +25,7 @@ html {
 
 body {
   margin: 0;
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 
@@ -263,7 +263,7 @@ kbd,
 pre,
 samp {
   font-size: 17px;
-  background: #1f2532;
+  background: #2b3344;
   color: #ffffff;
   padding: 5px;
 }
@@ -615,8 +615,8 @@ th {
 }
 
 body {
-  color: #222222;
-  background: #f4f4f4;
+  color: #dadada;
+  background: #1f2532;
   font-family: "Muli", serif;
   font-weight: 400;
   transition: all 0.3s ease;
@@ -634,13 +634,13 @@ h6 {
 
 a {
   text-decoration: none;
-  color: #622859;
+  color: #23b34f;
   font-weight: bold;
   transition: all 0.3s ease;
 }
 
 a:hover {
-  color: #222222;
+  color: #2bce5d;
 }
 
 h1 a,
@@ -649,7 +649,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-  color: #222222;
+  color: #fff;
   font-weight: 300;
 }
 
@@ -663,8 +663,8 @@ h6 a:hover {
 }
 
 blockquote {
-  color: #4c4c4c;
-  border-left: 5px solid #1f2532;
+  color: #ffffff;
+  border-left: 5px solid #23b34f;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
@@ -761,7 +761,7 @@ hr {
 }
 
 .content {
-  padding-top: 10px;
+  padding: 10px;
   display:block;
 }
 
@@ -947,7 +947,7 @@ hr {
 }
 
 .btn:hover {
-  background-color: #6c6783;
+  background-color: #1f2532;
   color: #FFF;
 }
 
