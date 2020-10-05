@@ -25,7 +25,7 @@ html {
 
 body {
   margin: 0;
-  font-size: 1.1em;
+  font-size: 1.0em;
 }
 
 
@@ -262,7 +262,7 @@ code,
 kbd,
 pre,
 samp {
-  font-size: 17px;
+  font-size: 16px;
   background: #2b3344;
   color: #ffffff;
   padding: 5px;
