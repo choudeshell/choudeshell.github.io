@@ -939,18 +939,13 @@ hr {
   color: #000;
   background-color: #fff;
   border-color: #2a373d;
-  color: #fff;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   transition: all .2s ease-in-out;
-  background: #2b3344;
   border: 1px solid #ececec;
-  padding: 0 1.6rem;
   font-size: .9rem;
-  height: 3rem;
-  line-height: 3rem;
 }
 
 .btn:hover {
